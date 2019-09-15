@@ -35,9 +35,13 @@ $c-froggy-yellowgreen: #E3E65B;
     padding: 0.7rem;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+
+    @media (min-width: 960px) {
+      justify-content: center;
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -72,8 +76,12 @@ $c-froggy-yellowgreen: #E3E65B;
   }
 
   &__logo {
-    margin-top: 1.25rem;
+    margin-top: 0.25rem;
     width: 2.5rem;
+
+    @media (min-width: 960px) {
+      margin-top: 1.25rem;
+    }
   }
 
   &__toggle {
