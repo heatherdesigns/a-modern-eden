@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:900,900i|Roboto:300,700|Roboto+Mono&display=swap');
 
-$c-base: #56485B;
-$c-pale: #F5F1F6;
+$c-base: #625F5D;
+$c-white: #FFFFFF;
+$c-soft-grey: #EFEFEF;
+$c-charcoal: #4A4A4A;
+$c-ocean: #B9E2E4;
+$c-rooster-red: #D45745;
+$c-dolphin-blue: #3F81A3;
+$c-froggy-yellowgreen: #E3E65B;
 
 .drizzle-variant-button {
   border: none;
@@ -22,7 +28,7 @@ $c-pale: #F5F1F6;
 
 .drizzle-nav {
   background: $c-base;
-  color: $c-pale;
+  color: $c-white;
   -webkit-font-smoothing: antialiased;
 
   &__header {
@@ -114,7 +120,7 @@ $c-pale: #F5F1F6;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
 
-    color: $c-pale !important;
+    color: $c-white !important;
 
     display: block;
 
@@ -124,22 +130,33 @@ $c-pale: #F5F1F6;
 
     &:focus,
     &:hover {
-      background-color: mix($c-base, $c-pale, 90%) !important;
+      background-color: mix($c-base, $c-white, 90%) !important;
     }
   }
 }
 
 
 .drizzle-heading-1 {
+  color: $c-charcoal;
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   line-height: 1;
   margin: 0 0 1em;
 
   -webkit-font-smooothing: antialiased;
+
+  &::before {
+    content: '';
+    background: url(/images/AME-tree.svg) no-repeat;
+    display: inline-block;
+    width: 2rem;
+    height: 2.75rem;
+    padding-right: 0.875rem;
+  }
 }
 
 .drizzle-heading-2 {
+  color: $c-charcoal;
   font-family: 'Playfair Display', serif;
   font-size: 1.2em;
 
@@ -148,7 +165,7 @@ $c-pale: #F5F1F6;
 
 .drizzle-collection-heading {
   line-height: 1;
-  color: $c-base;
+  color: $c-charcoal;
 
   &__sub {
     font-family: 'Roboto Mono', sans-serif;
@@ -173,7 +190,7 @@ $c-pale: #F5F1F6;
 }
 
 .drizzle-Layout-main {
-  background: $c-pale;
+  background: $c-white;
 }
 
 .drizzle-white-bg {
@@ -182,7 +199,7 @@ $c-pale: #F5F1F6;
 
 
 .drizzle-pattern {
-  background: white;
+  background: lighten($c-soft-grey, 2%);
 
   padding: 12px;
 
@@ -230,13 +247,13 @@ $c-pale: #F5F1F6;
     font-weight: 700;
 
     background: $c-base;
-    color: $c-pale;
+    color: $c-white;
     padding: 0.3rem 0.4rem;
   }
 
   &__variant-box {
     background: $c-base;
-    color: $c-pale;
+    color: $c-white;
     font-family: 'Roboto', sans-serif;
 
     display: grid;
@@ -276,7 +293,7 @@ $c-pale: #F5F1F6;
   }
 
   &__demo-box {
-    border: 3px solid $c-pale;
+    border: 3px solid $c-white;
     background: white;
 
     padding: 24px;
@@ -306,11 +323,11 @@ $c-pale: #F5F1F6;
 }
 
 .is-active {
-  background-color: mix($c-base, $c-pale, 90%) !important;
+  background-color: mix($c-base, $c-white, 90%) !important;
 }
 
 .drizzle-example-block {
   height: 100px;
-  background: $c-base;
+  background: $c-rooster-red;
   box-shadow: inset 0 0 0 2px white;
 }
