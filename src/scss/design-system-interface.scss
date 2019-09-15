@@ -35,8 +35,9 @@ $c-froggy-yellowgreen: #E3E65B;
     padding: 0.7rem;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   &__content {
@@ -56,7 +57,7 @@ $c-froggy-yellowgreen: #E3E65B;
     margin: 0;
 
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 1.625rem;
     font-weight: bold;
 
     a {
@@ -68,6 +69,11 @@ $c-froggy-yellowgreen: #E3E65B;
     @media (min-width: 960px) {
       margin-bottom: 1rem;
     }
+  }
+
+  &__logo {
+    margin-top: 1.25rem;
+    width: 2.5rem;
   }
 
   &__toggle {
@@ -144,15 +150,6 @@ $c-froggy-yellowgreen: #E3E65B;
   margin: 0 0 1em;
 
   -webkit-font-smooothing: antialiased;
-
-  &::before {
-    content: '';
-    background: url(/images/AME-tree.svg) no-repeat;
-    display: inline-block;
-    width: 2rem;
-    height: 2.75rem;
-    padding-right: 0.875rem;
-  }
 }
 
 .drizzle-heading-2 {
