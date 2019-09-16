@@ -81,6 +81,7 @@ $c-froggy-yellowgreen: #E3E65B;
 
     @media (min-width: 960px) {
       margin-top: 1.25rem;
+      margin-bottom: -0.5rem;
     }
   }
 
@@ -320,6 +321,18 @@ $c-froggy-yellowgreen: #E3E65B;
     background: white !important;
     font-family: 'Roboto Mono', sans-serif !important;
     font-size: 14px;
+
+    .token {
+      color: $c-charcoal;
+
+      &.attr-value {
+        color: $c-rooster-red;
+      }
+
+      &.punctuation {
+        color: $c-dolphin-blue;
+      }
+    }
   }
 
   &__demo-box-button {
