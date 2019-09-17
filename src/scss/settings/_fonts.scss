@@ -1,2 +1,17 @@
-// @font-face {
-// }
+// SourceSans Variable
+@font-face {
+  font-family: 'SourceSansVariable';
+  src: url('/fonts/SourceSansVariable-Roman.woff2') format('woff2-variations');
+  font-weight: 1 999;
+}
+
+// add SourceSans Regular fallback
+@font-face {
+  font-family: 'SourceSans';
+  src: url('/fonts/SourceSansVariable-Roman.woff2') format('woff2'), url('/fonts/SourceSansPro-Regular.woff') format('woff');
+  font-weight: 400;
+}
+
+// TODO: add additional SourceSans fallbacks, look to see what weight are being used
+
+// TODO: add Personalitype
