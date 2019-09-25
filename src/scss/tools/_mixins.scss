@@ -120,63 +120,6 @@
   }
 }
 
-@mixin h1 {
-  color: inherit;
-  color: var(--heading-color);
-
-  font-size: 2.125em;
-  font-weight: bold;
-
-  margin: 0 0 space(lg);
-}
-
-@mixin h2 {
-  color: inherit;
-  color: var(--heading-color);
-
-  font-size: 1.625em;
-  font-weight: bold;
-
-  margin: 0 0 space(lg);
-}
-
-@mixin h3 {
-  color: inherit;
-  color: var(--heading-color);
-
-  font-size: 1.375em;
-  font-weight: bold;
-
-  margin: 0 0 space(md);
-}
-
-@mixin h4 {
-  color: inherit;
-  color: var(--heading-color);
-
-  font-size: 1.125em;
-  font-weight: bold;
-
-  margin: 0 0 space(md);
-}
-
-@mixin h5 {
-  color: inherit;
-  color: var(--heading-color);
-
-  font-size: 1em;
-  font-weight: bold;
-
-  margin: 0 0 space(md);
-}
-
-@mixin h6 {
-  font-size: 1em;
-  font-weight: normal;
-
-  margin: 0 0 space(md);
-}
-
 @mixin visually-hidden($status:null) {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); // IE6, IE7
@@ -208,5 +151,26 @@
     box-shadow:
       0 0 0 2px $c-safe-focus,
       0 0 0 4px white !important;
+  }
+}
+
+@mixin font-stack-primary($weight: 400) {
+  font-family: $font-stack-primary;
+  font-weight: $weight;
+
+  // For browsers that support variable fonts
+  @supports (font-variation-settings: normal) {
+    font-family: $font-stack-primary-variable;
+    font-variation-settings: "wght" $weight;
+  }
+}
+
+@mixin font-stack-decorative {
+  font-family: $font-stack-decorative;
+
+  // For browsers that support variable fonts
+  @supports (font-variation-settings: normal) {
+    font-family: $font-stack-decorative-variable;
+    font-variation-settings: "wght" 700;
   }
 }

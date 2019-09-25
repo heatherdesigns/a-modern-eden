@@ -5,13 +5,30 @@
   font-weight: 1 999;
 }
 
-// add SourceSans Regular fallback
+// SourceSans Regular fallback
 @font-face {
   font-family: 'SourceSans';
   src: url('/fonts/SourceSansVariable-Roman.woff2') format('woff2'), url('/fonts/SourceSansPro-Regular.woff') format('woff');
   font-weight: 400;
 }
 
-// TODO: add additional SourceSans fallbacks, look to see what weight are being used
+// SourceSans Bold fallback
+@font-face {
+  font-family: 'SourceSans';
+  src: url('/fonts/SourceSansVariable-Roman.woff2') format('woff2'), url('/fonts/SourceSansPro-Bold.woff') format('woff');
+  font-weight: 700;
+}
 
-// TODO: add Personalitype
+// Personalitype Variable
+@font-face {
+  font-family: 'PersonalitypeVariable';
+  src: url('/fonts/personalitype-bold.woff2') format('woff2-variations');
+  font-weight: 1 999;
+}
+
+// Personalitype fallback
+@font-face {
+  font-family: 'Personalitype';
+  src: url('/fonts/personalitype-bold.woff2') format('woff2'), url('/fonts/personalitype-bold.woff') format('woff');
+  font-weight: 700;
+}

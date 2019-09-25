@@ -1,0 +1,57 @@
+@mixin h1 {
+  @include font-stack-decorative;
+  color: inherit;
+  color: var(--heading-color); // TODO: update all colors!
+
+  font-size: 2.5rem;
+
+  margin: 0 0 space(lg);
+}
+
+@mixin h2 {
+  @include font-stack-decorative;
+  color: inherit;
+  color: var(--heading-color);
+
+  font-size: 2rem;
+
+  margin: 0 0 space(lg);
+}
+
+@mixin h3 {
+  @include font-stack-primary($weight: 700);
+  color: inherit;
+  color: var(--heading-color);
+
+  font-size: 1.625rem;
+
+  margin: 0 0 space(md);
+}
+
+@mixin h4 {
+  @include font-stack-primary($weight: 700);
+  color: inherit;
+  color: var(--heading-color);
+
+  font-size: 1.375rem;
+
+  margin: 0 0 space(md);
+}
+
+@mixin h5 {
+  @include font-stack-primary($weight: 700);
+  color: inherit;
+  color: var(--heading-color);
+
+  font-size: 1.125rem;
+  text-transform: uppercase;
+
+  margin: 0 0 space(md);
+}
+
+@mixin h6 {
+  @include font-stack-primary($weight: 700);
+  font-size: 1rem;
+
+  margin: 0 0 space(md);
+}
