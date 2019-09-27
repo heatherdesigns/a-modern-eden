@@ -1,4 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900,900i|Roboto:300,700|Roboto+Mono&display=swap');
+//
+// FONTS
+//
+
+$font-stack-primary: "SourceSans", Helvetica, Arial, sans-serif;
+$font-stack-primary-variable: "SourceSansVariable", sans-serif;
+$font-stack-decorative: "Personalitype", cursive;
+$font-stack-decorative-variable: "PersonalitypeVariable", cursive;
+
+@mixin font-stack-primary($weight: 400) {
+  font-family: $font-stack-primary;
+  font-weight: $weight;
+
+  // For browsers that support variable fonts
+  @supports (font-variation-settings: normal) {
+    font-family: $font-stack-primary-variable;
+    font-variation-settings: "wght" $weight;
+  }
+}
+
+@mixin font-stack-decorative {
+  font-family: $font-stack-decorative;
+
+  // For browsers that support variable fonts
+  @supports (font-variation-settings: normal) {
+    font-family: $font-stack-decorative-variable;
+    font-variation-settings: "wght" 700;
+  }
+}
+
+//
+// COLORS
+//
 
 $c-base: #625F5D;
 $c-white: #FFFFFF;
@@ -8,6 +40,10 @@ $c-ocean: #B9E2E4;
 $c-rooster-red: #D45745;
 $c-dolphin-blue: #3F81A3;
 $c-froggy-yellowgreen: #E3E65B;
+
+//
+// STYLES
+//
 
 .drizzle-variant-button {
   border: none;
@@ -54,13 +90,14 @@ $c-froggy-yellowgreen: #E3E65B;
 
     @media (min-width: 960px) {
       display: block !important;
+      padding-left: 1.5rem;
     }
   }
 
   &__title {
     margin: 0;
 
-    font-family: 'Roboto', sans-serif;
+    @include font-stack-primary(700);
     font-size: 1.625rem;
     font-weight: bold;
 
@@ -93,7 +130,7 @@ $c-froggy-yellowgreen: #E3E65B;
     border-radius: 0;
     appearance: none; // Just in case we missed anything.
 
-    font-family: 'Roboto', sans-serif;
+    @include font-stack-primary();
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -114,8 +151,8 @@ $c-froggy-yellowgreen: #E3E65B;
     margin: 0.2rem 0;
     padding: 0 0.7rem;
 
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    @include font-stack-primary(650);
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -132,8 +169,8 @@ $c-froggy-yellowgreen: #E3E65B;
 
   &__link {
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    @include font-stack-primary();
+    font-size: 1rem;
 
     color: $c-white !important;
 
@@ -153,45 +190,45 @@ $c-froggy-yellowgreen: #E3E65B;
 
 .drizzle-heading-1 {
   color: $c-charcoal;
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  line-height: 1;
-  margin: 0 0 1em;
+  @include font-stack-decorative;
+  font-size: 2.75rem;
+  line-height: 1.5;
+  margin: 0.5em 0 1em;
 
   -webkit-font-smooothing: antialiased;
 }
 
 .drizzle-heading-2 {
   color: $c-charcoal;
-  font-family: 'Playfair Display', serif;
+  @include font-stack-decorative;
   font-size: 1.2em;
 
   -webkit-font-smooothing: antialiased;
 }
 
 .drizzle-collection-heading {
-  line-height: 1;
+  line-height: 1.5;
   color: $c-charcoal;
 
   &__sub {
-    font-family: 'Roboto Mono', sans-serif;
+    @include font-stack-primary();
     font-size: 16px;
     display: block;
   }
 
   &__text {
-    font-family: 'Playfair Display', serif;
+    @include font-stack-decorative;
     font-size: 36px;
 
     @media (min-width: 30em) {
-      font-size: 48px;
+      font-size: 2.75rem;
     }
   }
 }
 
 .drizzle-p {
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  @include font-stack-primary();
   color: $c-base;
 }
 
@@ -222,7 +259,7 @@ $c-froggy-yellowgreen: #E3E65B;
 
   &__title {
     font-size: 22px;
-    font-family: 'Roboto', sans-serif;
+    @include font-stack-primary(700);
     font-weight: 700;
     line-height: 1;
 
@@ -237,7 +274,7 @@ $c-froggy-yellowgreen: #E3E65B;
 
   &__info {
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    @include font-stack-primary();
     color: $c-base;
 
     margin-top: 1em;
@@ -249,18 +286,18 @@ $c-froggy-yellowgreen: #E3E65B;
     border: none;
 
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    @include font-stack-primary(700);
     font-weight: 700;
 
     background: $c-base;
     color: $c-white;
-    padding: 0.3rem 0.4rem;
+    padding: 0.4rem 0.5rem 0.4rem 0.6rem;
   }
 
   &__variant-box {
     background: $c-base;
     color: $c-white;
-    font-family: 'Roboto', sans-serif;
+    @include font-stack-primary();
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(9rem, 13rem));
@@ -269,7 +306,7 @@ $c-froggy-yellowgreen: #E3E65B;
     padding: 1rem;
 
     code {
-      font-family: 'Roboto Mono', sans-serif !important;
+      @include font-stack-primary(); // May need to update
     }
 
     input {
@@ -292,7 +329,7 @@ $c-froggy-yellowgreen: #E3E65B;
   }
 
   &__demo-box-title {
-    font-family: 'Roboto', sans-serif;
+    @include font-stack-primary();
     font-size: 12px;
     color: rgba($c-base, 0.7);
     margin: 0;
@@ -319,7 +356,7 @@ $c-froggy-yellowgreen: #E3E65B;
   &__source {
     // This override's prism's default styles
     background: white !important;
-    font-family: 'Roboto Mono', sans-serif !important;
+    @include font-stack-primary(); // May need to update
     font-size: 14px;
 
     .token {
@@ -336,7 +373,7 @@ $c-froggy-yellowgreen: #E3E65B;
   }
 
   &__demo-box-button {
-    font-family: 'Roboto', sans-serif;
+    @include font-stack-primary();
   }
 }
 
