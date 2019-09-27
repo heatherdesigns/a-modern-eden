@@ -1,0 +1,8 @@
+em {
+  // For browsers that support variable fonts
+  @supports (font-variation-settings: normal) {
+    font-style: italic;
+    font-variation-settings: 'ital' 1;
+    font-synthesis: none;
+  }
+}

@@ -1,16 +1,10 @@
 body {
-  font-family: $font-stack-primary;
-  font-weight: 400;
+  // font-family: $font-stack-primary;
+  @include font-stack-primary;
   line-height: $line-height-normal;
 
   color: $c-soft-black;
 
   // This forces a scrollbar
   min-height: 100.1vh;
-
-  // For browsers that support variable fonts
-  @supports (font-variation-settings: normal) {
-    font-family: $font-stack-primary-variable;
-    font-variation-settings: "wght" 400;
-  }
 }

@@ -1,0 +1,6 @@
+strong {
+  // For browsers that support variable fonts
+  @supports (font-variation-settings: normal) {
+    font-variation-settings: "wght" 700;
+  }
+}

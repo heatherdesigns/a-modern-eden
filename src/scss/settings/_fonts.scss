@@ -1,8 +1,19 @@
-// SourceSans Variable
+// SourceSans Variable Roman
 @font-face {
   font-family: 'SourceSansVariable';
   src: url('/fonts/SourceSansVariable-Roman.woff2') format('woff2-variations');
-  font-weight: 1 999;
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+// SourceSans Variable Italic
+@font-face {
+  font-family: 'SourceSansVariable';
+  src: url('/fonts/SourceSansVariable-Italic.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
 }
 
 // SourceSans Regular fallback
