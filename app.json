@@ -1,0 +1,27 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "AUTH_PASSWORD": {
+      "required": true
+    },
+    "AUTH_USER": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "a-modern-eden",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
