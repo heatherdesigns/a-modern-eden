@@ -34,6 +34,7 @@ All CSS is compiled from [Sass](https://sass-lang.com/) and can be found in the 
 
 JavaScript
 ----------
+
 All JavaScript is compiled with [Webpack](https://webpack.js.org/) and can be found in the `js/` directory. All JavaScript files should be imported into `index.js` which will then be compiled to `dist/js/scripts.js`.
 
 Testing
@@ -44,3 +45,13 @@ Running `npm test` will run the following tasks:
 - `pa11y`: Runs accessibility tests on all HTML files in the `dist/` directory
 - `stylelint`: Checks all CSS  in the `dist/` for errors and enforces [Sparkbox's code conventions](https://www.npmjs.com/package/@sparkbox/stylelint-config-sparkbox)
 - `eslint`: Checks all JavaScript  in the `dist/` for errors and enforces [Sparkbox's code conventions](https://www.npmjs.com/package/eslint-config-sparkbox)
+
+Deploying
+---------
+
+A Modern Eden is hosted on Heroku.
+
+Running `git push heroku master` will deploy the latest version of `master` to https://a-modern-eden.herokuapp.com 
+
+See [Heroku documentation](https://devcenter.heroku.com/articles/git#deploying-code) for deploying code.
+
