@@ -2,8 +2,9 @@
 title: Colors
 layout: drizzle
 ---
+<h1 class="drizzle-heading-1">{{title}}</h1>
+
 {{#with (data 'colors')}}
-  <h1 class="drizzle-heading-1">{{title}}</h1>
   <h2 class="drizzle-pattern__title u-margin-bottom-xl">Brand Colors</h2>
   <div class="o-grid u-margin-bottom-xl">
     {{#each brand-colors}}
