@@ -16,7 +16,7 @@ brand-colors:
 
 secondary-colors:
   - hex: "#4A4A4A"
-    variable: "charcoal"
+    variable: "$c-charcoal"
   - hex: "#EFEFEF"
     variable: "$c-soft-grey"
   - hex: "#FFFFFF"
