@@ -1,0 +1,24 @@
+brand-colors:
+  - hex: "#625F5D"
+    variable: "$c-monkey-brown"
+  - hex: "#D45745"
+    variable: "$c-rooster-red"
+  - hex: "#F8A9A9"
+    variable: "$c-pretty-in-pink"
+  - hex: "#FFDFDF"
+    variable: "$c-piggy-pink"
+  - hex: "#3F81A3"
+    variable: "$c-dolphin-blue"
+  - hex: "#B9E2E4"
+    variable: "$c-ocean"
+  - hex: "#E3E65B"
+    variable: "$c-froggy-yellowgreen"
+
+secondary-colors:
+  - hex: "#4A4A4A"
+    variable: "charcoal"
+  - hex: "#EFEFEF"
+    variable: "$c-soft-grey"
+  - hex: "#FFFFFF"
+    variable: "$c-white"
+    border: true

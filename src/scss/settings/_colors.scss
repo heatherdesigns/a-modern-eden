@@ -1,7 +1,21 @@
-$c-nasty-blue: #0000ff;
+$c-nasty-blue: #0000ff; // TODO: eliminate!!!!
 $c-painful-green: #00ff00;
 $c-terrible-red: #ff0000;
 $c-soft-black: #333;
+
+// Brand Colors
+$c-monkey-brown: #625F5D;
+$c-rooster-red: #D45745;
+$c-pretty-in-pink: #F8A9A9;
+$c-piggy-pink: #FFDFDF;
+$c-ocean: #B9E2E4;
+$c-dolphin-blue: #3F81A3;
+$c-froggy-yellowgreen: #E3E65B;
+
+// Secondary Colors
+$c-white: #FFFFFF;
+$c-soft-grey: #EFEFEF;
+$c-charcoal: #4A4A4A;
 
 // This is the lightest value that still has
 // a >4.5 contrast ratio against white.
@@ -14,10 +28,10 @@ $c-lightest-gray: #767676;
 // Large text is >=24px, or >=18.67px if it's bold
 $c-lightest-gray-large-text: #949494;
 
-$c-btn-primary: $c-nasty-blue;
+$c-btn-primary: $c-dolphin-blue; // TODO: update!!!!
 $c-btn-secondary: $c-painful-green;
 $c-btn-tertiary: $c-terrible-red;
 
-$c-default-link: $c-nasty-blue;
+$c-default-link: $c-dolphin-blue;
 
-$c-safe-focus: darken($c-nasty-blue, 20%);
+$c-safe-focus: darken($c-dolphin-blue, 20%);

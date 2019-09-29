@@ -1,0 +1,29 @@
+---
+title: Colors
+layout: drizzle
+---
+{{#with (data 'colors')}}
+  <h1 class="drizzle-heading-1">{{title}}</h1>
+  <h2 class="drizzle-pattern__title u-margin-bottom-xl">Brand Colors</h2>
+  <div class="o-grid u-margin-bottom-xl">
+    {{#each brand-colors}}
+      <div class="o-grid__third o-grid__quarter@md u-margin-bottom-lg">
+        <div class="drizzle-color-swatch" style="background-color: {{hex}};"></div>
+        <p class="u-text-center u-margin-bottom-none">{{hex}}</p>
+        <p class="u-text-center u-margin-top-none">{{variable}}</p>
+      </div>
+    {{/each}}
+  </div>
+
+  <h2 class="drizzle-pattern__title u-margin-bottom-xl">Secondary Colors</h2>
+    <div class="o-grid u-margin-bottom-xl">
+    {{#each secondary-colors}}
+      <div class="o-grid__third o-grid__quarter@md u-margin-bottom-lg">
+        <div class="drizzle-color-swatch" style="background-color: {{hex}}; {{#if border}}border: 2px solid #EFEFEF;{{/if}}"></div>
+        <p class="u-text-center u-margin-bottom-none">{{hex}}</p>
+        <p class="u-text-center u-margin-top-none">{{variable}}</p>
+      </div>
+    {{/each}}
+  </div>
+
+{{/with}}
