@@ -393,3 +393,38 @@ $c-froggy-yellowgreen: #E3E65B;
   border-radius: 50%;
   margin: auto;
 }
+
+.drizzle-personalitype {
+  @include font-stack-decorative();
+  margin: 0;
+}
+
+.drizzle-doc-heading-2 {
+  font-size: 22px;
+  @include font-stack-primary(700);
+  font-weight: 700;
+  line-height: 1;
+
+  color: $c-base;
+
+  margin: 0;
+
+  @media (min-width: 30em) {
+    font-size: 32px;
+  }
+}
+
+.drizzle-doc-heading-3 {
+  font-size: 16px;
+  @include font-stack-primary(700);
+  font-weight: 700;
+  line-height: 1;
+
+  color: $c-base;
+
+  margin: 0;
+
+  @media (min-width: 30em) {
+    font-size: 24px;
+  }
+}
