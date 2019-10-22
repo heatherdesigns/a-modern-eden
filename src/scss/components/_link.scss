@@ -1,3 +1,8 @@
 .c-link {
   @include default-link;
+
+  &--alternate {
+    border-color: $c-white;
+    background-image: linear-gradient(to top, transparent 50%, $c-white 50%);
+  }
 }

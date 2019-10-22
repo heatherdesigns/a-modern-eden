@@ -115,7 +115,7 @@ hidden: true
   {{!-- Preview --}}
   <div class="u-margin-top-lg">
     <h3 class="drizzle-pattern__demo-box-title">View</h3>
-    <div class="drizzle-pattern__demo-box drizzle-pattern__demo-box--view {{data.previewClass}}">
+    <div class="drizzle-pattern__demo-box drizzle-pattern__demo-box--view {{#if data.background-color}} drizzle-pattern__demo-box--alternate{{/if}} {{data.previewClass}}">
       {{{pattern id @root}}}
     </div>
     {{!-- Code sample --}}

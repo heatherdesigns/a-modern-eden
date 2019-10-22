@@ -351,6 +351,12 @@ $c-froggy-yellowgreen: #E3E65B;
       // This override's prism's default styles
       background: white !important;
     }
+
+    // change background color of the demo box for alternate styles
+    &--alternate {
+      background-color: $c-ocean;
+      border-color: $c-ocean;
+    }
   }
 
   &__source {
