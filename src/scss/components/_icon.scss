@@ -3,4 +3,15 @@
     width: 1em;
     height: 0.6875em;
   }
+
+  &--facebook,
+  &--twitter,
+  &--instagram {
+    width: 1.8125rem;
+    height: 1.8125rem;
+  }
+
+  &--footer-tree {
+    width: 2.75rem;
+  }
 }

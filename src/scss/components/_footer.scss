@@ -1,0 +1,46 @@
+.c-footer {
+  background-color: $c-monkey-brown;
+
+  &__copy {
+    color: $c-white;
+    margin: 0;
+  }
+
+  &__link {
+    color: $c-white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__logo {
+    place-self: center;
+    line-height: 1;
+  }
+
+  &__contact {
+    text-align: right;
+  }
+
+  &__love {
+    color: $c-piggy-pink;
+    padding: 0 0.25rem;
+  }
+
+  &__icon-link {
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 0.75rem;
+    fill: $c-white;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+    &:hover {
+      fill: $c-piggy-pink; // test and choose color
+    }
+  }
+}
