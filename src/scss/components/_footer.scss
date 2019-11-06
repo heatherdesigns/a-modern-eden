@@ -1,3 +1,7 @@
+$c-facebook-blue: #4267B2;
+$c-twitter-blue: #1DA1F2;
+$c-instagram-gradient: linear-gradient(to right top, #fcac0f, #fd9522, #f36a3c, #d42d65, #d12174, #ca1b85);
+
 .c-footer {
   background-color: $c-monkey-brown;
 
@@ -21,7 +25,19 @@
   }
 
   &__contact {
-    text-align: right;
+    text-align: center;
+
+    @media (min-width: $bp-md) {
+      text-align: right;
+    }
+  }
+
+  &__legal {
+    text-align: center;
+
+    @media (min-width: $bp-md) {
+      text-align: left;
+    }
   }
 
   &__love {
@@ -32,15 +48,41 @@
   &__icon-link {
     display: inline-block;
     text-decoration: none;
-    padding-right: 0.75rem;
+    margin-right: 0.75rem;
+    height: 1.8125rem;
+    width: 1.8125rem;
+    border-radius: 50%;
     fill: $c-white;
+    background: transparent;
+    transition: all 150ms ease-in;
 
     &:last-of-type {
-      padding-right: 0;
+      margin-right: 0;
     }
 
     &:hover {
-      fill: $c-piggy-pink; // test and choose color
+      transform: translateY(-3px);
+    }
+
+    &--facebook {
+      &:hover {
+        background-color: $c-facebook-blue;
+        border-radius: 50%;
+      }
+    }
+
+    &--twitter {
+      &:hover {
+        background-color: $c-twitter-blue;
+        border-radius: 50%;
+      }
+    }
+
+    &--instagram {
+      &:hover {
+        background-image: $c-instagram-gradient;
+        border-radius: 50%;
+      }
     }
   }
 }
