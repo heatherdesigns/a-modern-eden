@@ -2,7 +2,7 @@
   line-height: 1;
 
   &__logo {
-    padding: 1.75rem 0;
+    padding: 1.75rem 0 1.25rem;
     text-align: center;
 
     @media (min-width: $bp-sm) {
@@ -22,9 +22,77 @@
 
   &__nav {
     text-align: center;
+    padding-bottom: 0.5rem;
+    // background-color: $c-soft-grey;
+
+    @media (min-width: $bp-stacked-nav) {
+      // background-color: transparent;
+    }
 
     @media (min-width: $bp-md) {
       text-align: right;
+      padding-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+
+    @media (min-width: $bp-stacked-nav) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $bp-md) {
+      justify-content: flex-end;
+      padding-left: 1rem;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    padding-bottom: 3rem;
+
+    @media (min-width: $bp-stacked-nav) {
+      padding-right: 5vw;
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $bp-md) {
+      padding-right: 3vw;
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-right: 4.5vw;
+    }
+
+    @media (min-width: $bp-xl) {
+      padding-right: 6vw;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+      padding-bottom: 2rem;
+
+      @media (min-width: $bp-stacked-nav) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    @include font-stack-primary($weight: 700);
+    color: $c-charcoal;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @media (min-width: $bp-lg) {
+      font-size: 1.125rem;
     }
   }
 }
