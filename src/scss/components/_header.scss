@@ -56,6 +56,10 @@
       justify-content: flex-end;
       padding-left: 1rem;
     }
+
+    &[aria-hidden="true"] { // hide the nav list
+      display: none;
+    }
   }
 
   &__item {
@@ -131,7 +135,7 @@
     }
   }
 
-  & .hide-menu-btn {
+  &__menu-btn {
     max-height: 2.25rem;
     margin-left: 1rem;
 
