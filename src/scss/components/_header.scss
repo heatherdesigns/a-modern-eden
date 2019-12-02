@@ -1,11 +1,27 @@
 .c-header {
   line-height: 1;
 
+  &__container {
+
+    @media (min-width: $bp-unstack-nav) {
+      height: auto !important;
+    }
+
+    &.hide-container {
+      //
+    }
+
+    &.expand-container {
+      height: 100vh;
+    }
+  }
+
   &__intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.75rem 0;
+    height: 14.25vh;
 
     @media (min-width: $bp-sm) {
       & img {
@@ -15,6 +31,7 @@
 
     @media (min-width: $bp-unstack-nav) {
       justify-content: center;
+      height: auto; // reset!
 
       & img {
         width: 75%;
@@ -31,12 +48,24 @@
   }
 
   &__nav {
-    text-align: center;
-    padding-bottom: 0.5rem;
+
+    @media (min-width: $bp-unstack-nav) {
+      height: auto !important; // reset!
+      text-align: center;
+      padding-bottom: 0.5rem;
+    }
 
     @media (min-width: $bp-md) {
       text-align: right;
       padding-bottom: 0;
+    }
+
+    &.hide-nav {
+      //
+    }
+
+    &.expand-nav {
+      height: 85.75vh;
     }
   }
 
@@ -47,9 +76,13 @@
     align-items: center;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    height: 100%;
 
     @media (min-width: $bp-unstack-nav) {
       flex-direction: row;
+      margin: 1rem 0;
+      height: auto; // reset!
     }
 
     @media (min-width: $bp-md) {
@@ -63,13 +96,16 @@
   }
 
   &__item {
-    text-align: center;
-    padding-bottom: 3rem;
+    display: flex;
     transition: transform 150ms ease-in;
     position: relative;
+    width: 100vw;
+    height: 33.333%;
 
     &:hover {
-      transform: translateY(2px);
+      @media (min-width: $bp-unstack-nav) {
+        transform: translateY(2px);
+      }
 
       @media (min-width: $bp-md) {
         transform: translateY(3px);
@@ -79,6 +115,8 @@
     @media (min-width: $bp-unstack-nav) {
       padding-right: 5vw;
       padding-bottom: 0;
+      width: auto;
+      height: auto; // reset!
     }
 
     @media (min-width: $bp-md) {
@@ -94,39 +132,71 @@
     }
 
     &:last-of-type {
-      padding-right: 0;
-      padding-bottom: 2rem;
+      @media (min-width: $bp-unstack-nav) {
+        padding: 0;
+      }
+    }
+
+    &--discover {
+      background-color: $c-soft-grey;
 
       @media (min-width: $bp-unstack-nav) {
-        padding-bottom: 0;
+        background-color: transparent;
+      }
+    }
+
+    &--about {
+      background-color: $c-pretty-in-pink;
+
+      @media (min-width: $bp-unstack-nav) {
+        background-color: transparent;
+      }
+    }
+
+    &--sell {
+      background-color: $c-ocean;
+
+      @media (min-width: $bp-unstack-nav) {
+        background-color: transparent;
       }
     }
   }
 
   &__link {
     @include font-stack-primary($weight: 700);
+    flex-basis: 60%;
+    align-self: center;
     color: $c-charcoal;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     position: relative;
+    padding: 0 3.25rem 0 5.5rem;
+    line-height: 1.25;
 
-    &::before {
-      content: '';
-      color: $c-white;
-      opacity: 0;
-      transition: opacity 300ms ease-in;
-    }
+    @media (min-width: $bp-unstack-nav) {
+      flex-basis: 100%;
+      font-size: 1rem;
+      padding: 0;
 
-    &:hover {
+      // let's add a nice transition to the arrow icon
       &::before {
-        content: '\276F';
-        color: $c-froggy-yellowgreen;
-        opacity: 1;
-        transform: rotate(90deg) scale(1.25);
-        position: absolute;
-        top: 85%;
-        right: 50%;
+        content: '';
+        color: $c-white;
+        opacity: 0;
+        transition: opacity 300ms ease-in;
+      }
+
+      &:hover {
+        &::before {
+          content: '\276F';
+          color: $c-froggy-yellowgreen;
+          opacity: 1;
+          transform: rotate(90deg) scale(1.25);
+          position: absolute;
+          top: 85%;
+          right: 50%;
+        }
       }
     }
 
@@ -138,6 +208,29 @@
   &__menu-btn {
     max-height: 2.25rem;
     margin-left: 1rem;
+
+    @media (min-width: $bp-unstack-nav) {
+      display: none;
+    }
+  }
+
+  &__animal {
+    flex-basis: 40%;
+
+    &--bear {
+      background: white;
+      opacity: 0.5;
+    }
+
+    &--cow {
+      background: white;
+      opacity: 0.5;
+    }
+
+    &--dolphin {
+      background: white;
+      opacity: 0.5;
+    }
 
     @media (min-width: $bp-unstack-nav) {
       display: none;
