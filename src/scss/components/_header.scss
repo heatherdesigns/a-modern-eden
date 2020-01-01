@@ -66,6 +66,7 @@
 
     &.expand-nav {
       height: 85.75vh;
+      width: 100%;
     }
   }
 
@@ -164,14 +165,14 @@
 
   &__link {
     @include font-stack-primary($weight: 700);
-    flex-basis: 60%;
+    flex-basis: 50%;
     align-self: center;
     color: $c-charcoal;
     font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     position: relative;
-    padding: 0 3.25rem 0 5.5rem;
+    padding: 0 3.5rem 0 2rem;
     line-height: 1.25;
 
     @media (min-width: $bp-unstack-nav) {
@@ -215,11 +216,10 @@
   }
 
   &__animal {
-    flex-basis: 40%;
+    flex-basis: 50%;
 
     &--bear {
-      background: white;
-      opacity: 0.5;
+      background: no-repeat top 30% right -15% / 155% url(/images/bear.svg);
     }
 
     &--cow {
