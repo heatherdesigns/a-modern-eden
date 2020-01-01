@@ -172,7 +172,7 @@
     text-transform: uppercase;
     text-decoration: none;
     position: relative;
-    padding: 0 3.5rem 0 2rem;
+    padding: 0 3.5rem 0 0.5rem;
     line-height: 1.25;
 
     @media (min-width: $bp-unstack-nav) {
@@ -223,13 +223,11 @@
     }
 
     &--cow {
-      background: white;
-      opacity: 0.5;
+      background: no-repeat top 34% right 34% / 190% url(/images/cow.svg);
     }
 
-    &--dolphin {
-      background: white;
-      opacity: 0.5;
+    &--elephant {
+      background: no-repeat top 45% right 27% / 197% url(/images/elephant.svg);
     }
 
     @media (min-width: $bp-unstack-nav) {
