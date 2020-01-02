@@ -2,17 +2,11 @@
   line-height: 1;
 
   &__container {
+    padding: 0;
 
     @media (min-width: $bp-unstack-nav) {
+      padding: 0 1.75rem;
       height: auto !important;
-    }
-
-    &.hide-container {
-      //
-    }
-
-    &.expand-container {
-      height: 100vh;
     }
   }
 
@@ -20,8 +14,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.75rem 0;
+    padding: 1.75rem;
     height: 14.25vh;
+
+    & img {
+      width: 55%;
+    }
 
     @media (min-width: $bp-sm) {
       & img {
@@ -31,7 +29,7 @@
 
     @media (min-width: $bp-unstack-nav) {
       justify-content: center;
-      height: auto; // reset!
+      height: auto;
 
       & img {
         width: 75%;
@@ -48,11 +46,17 @@
   }
 
   &__nav {
+    position: absolute;
+    height: 85.75vh;
+    top: 14.25vh;
 
     @media (min-width: $bp-unstack-nav) {
-      height: auto !important; // reset!
+      position: relative;
+      height: auto !important;
       text-align: center;
       padding-bottom: 0.5rem;
+      transition: unset;
+      top: 0;
     }
 
     @media (min-width: $bp-md) {
@@ -60,13 +64,13 @@
       padding-bottom: 0;
     }
 
-    &.hide-nav {
-      //
+    &.expand-nav.hide-nav {
+      left: 0;
+      overflow: visible !important;
     }
 
-    &.expand-nav {
-      height: 85.75vh;
-      width: 100%;
+    &.hide-nav { // delayed via JS for animation to complete
+      overflow: hidden;
     }
   }
 
@@ -79,45 +83,57 @@
     padding: 0;
     margin: 0;
     height: 100%;
+    position: relative;
+
+    &[aria-hidden="true"] {
+
+      & .c-header__item--discover,
+      & .c-header__item--about,
+      & .c-header__item--sell {
+        left: 100vw;
+      }
+    }
 
     @media (min-width: $bp-unstack-nav) {
       flex-direction: row;
       margin: 1rem 0;
-      height: auto; // reset!
+      height: auto;
     }
 
     @media (min-width: $bp-md) {
       justify-content: flex-end;
       padding-left: 1rem;
     }
+  }
 
-    &[aria-hidden="true"] { // hide the nav list
-      display: none;
+  &__anchor {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      .c-header__animal--bear,
+      .c-header__animal--cow,
+      .c-header__animal--elephant {
+        transform: translateX(-3px);
+      }
     }
   }
 
   &__item {
     display: flex;
-    transition: transform 150ms ease-in;
-    position: relative;
+    position: absolute;
     width: 100vw;
     height: 33.333%;
-
-    &:hover {
-      @media (min-width: $bp-unstack-nav) {
-        transform: translateY(2px);
-      }
-
-      @media (min-width: $bp-md) {
-        transform: translateY(3px);
-      }
-    }
 
     @media (min-width: $bp-unstack-nav) {
       padding-right: 5vw;
       padding-bottom: 0;
       width: auto;
-      height: auto; // reset!
+      height: auto;
+      position: relative;
+      transition: transform 150ms ease-in;
     }
 
     @media (min-width: $bp-md) {
@@ -132,6 +148,16 @@
       padding-right: 6vw;
     }
 
+    &:hover {
+      @media (min-width: $bp-unstack-nav) {
+        transform: translateY(2px);
+      }
+
+      @media (min-width: $bp-md) {
+        transform: translateY(3px);
+      }
+    }
+
     &:last-of-type {
       @media (min-width: $bp-unstack-nav) {
         padding: 0;
@@ -140,45 +166,120 @@
 
     &--discover {
       background-color: $c-soft-grey;
+      top: 0;
+      left: 0;
+
+      &.discover-show {
+        transition: left 400ms ease-in-out;
+      }
+
+      &.discover-hide {
+        transition: left 400ms ease-in-out 600ms;
+
+        @media (min-width: $bp-unstack-nav) {
+          transition: unset;
+        }
+      }
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
+        transition: unset;
       }
     }
 
     &--about {
       background-color: $c-pretty-in-pink;
+      left: 0;
+
+      &.about-show {
+        transition: left 400ms ease-in-out 300ms;
+      }
+
+      &.about-hide {
+        transition: left 400ms ease-in-out 300ms;
+
+        @media (min-width: $bp-unstack-nav) {
+          transition: unset;
+        }
+      }
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
+        transition: unset;
       }
     }
 
     &--sell {
       background-color: $c-ocean;
+      bottom: 0;
+      left: 0;
+
+      &.sell-show {
+        transition: left 400ms ease-in-out 600ms;
+      }
+
+      &.sell-hide {
+        transition: left 400ms ease-in-out;
+
+        @media (min-width: $bp-unstack-nav) {
+          transition: unset;
+        }
+      }
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
+        transition: unset;
       }
     }
   }
 
-  &__link {
+  &__text {
     @include font-stack-primary($weight: 700);
-    flex-basis: 50%;
     align-self: center;
     color: $c-charcoal;
     font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
-    position: relative;
-    padding: 0 3.5rem 0 0.5rem;
+    position: absolute;
+    padding: 0 3.5rem 0 0.75rem;
+    margin: auto;
     line-height: 1.25;
+    right: -50%;
+    width: 50%;
+
+    &--discover.discover-text-show {
+      right: 0;
+      transition: right 600ms ease-in-out;
+    }
+
+    &--discover.discover-text-hide {
+      transition: right 600ms ease-in-out 600ms;
+    }
+
+    &--about.about-text-show {
+      right: 0;
+      transition: right 600ms ease-in-out 300ms;
+    }
+
+    &--about.about-text-hide {
+      transition: right 600ms ease-in-out 300ms;
+    }
+
+    &--sell.sell-text-show {
+      right: 0;
+      transition: right 600ms ease-in-out 600ms;
+    }
+
+    &--sell.sell-text-hide {
+      transition: right 600ms ease-in-out;
+    }
 
     @media (min-width: $bp-unstack-nav) {
       flex-basis: 100%;
       font-size: 1rem;
       padding: 0;
+      position: relative;
+      right: 0;
 
       // let's add a nice transition to the arrow icon
       &::before {
@@ -217,6 +318,8 @@
 
   &__animal {
     flex-basis: 50%;
+    transform: translateX(0);
+    transition: transform 300ms ease;
 
     &--bear {
       background: no-repeat top 30% right -15% / 155% url(/images/bear.svg);
