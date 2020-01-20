@@ -1,28 +1,23 @@
 const navBtn = document.querySelector('.c-header__menu-btn');
 const navList = document.querySelector('.c-header__list');
-const nav = document.querySelector('.c-header__nav');
-let navOpen;
-let initialWindowState;
-const windowSize = 640; // unstacknav breakpoint
+let isNavOpen;
+let initialWindowStateIsDesktop;
+const desktopWindowSizeBreakpoint = 640; // unstacknav breakpoint
 
 function openNavList() {
-  clearTimeout();
   navBtn.setAttribute('aria-expanded', true);
   navList.setAttribute('aria-hidden', false);
-  nav.classList.add('expand-nav');
-  nav.classList.remove('hide-nav');
   navBtn.textContent = 'Close';
+  document.body.classList.remove('mobile-nav-closed');
+  document.body.classList.add('mobile-nav-open');
 }
 
 function closeNavList() {
   navBtn.setAttribute('aria-expanded', false);
   navList.setAttribute('aria-hidden', true);
-  nav.classList.remove('expand-nav');
   navBtn.textContent = 'Menu';
-
-  setTimeout(() => {
-    nav.classList.add('hide-nav');
-  }, 900);
+  document.body.classList.add('mobile-nav-closed');
+  document.body.classList.remove('mobile-nav-open');
 }
 
 // assign classes on click only that will trigger the mobile nav animation
@@ -85,69 +80,84 @@ function closeMobileNavOnClick() {
   removeAll();
   navBtn.setAttribute('aria-expanded', false);
   navList.setAttribute('aria-hidden', true);
-  nav.classList.remove('expand-nav');
   navBtn.textContent = 'Menu';
+  document.body.classList.add('mobile-nav-closed');
+  document.body.classList.remove('mobile-nav-open');
 }
 
 // Set initial values dependent upon the browser window size
-if (window.innerWidth >= windowSize) {
+if (window.innerWidth >= desktopWindowSizeBreakpoint) {
   openNavList();
-  navOpen = true;
-  // initialWindowState is used to close the nav menu when the window is resized
-  initialWindowState = true;
+  isNavOpen = true;
+  initialWindowStateIsDesktop = true;
 } else {
   closeNavList();
-  nav.classList.add('hide-nav'); // add hide-nav immediately upon page load
-  navOpen = false;
+  isNavOpen = false;
 }
 
-navBtn.addEventListener('click', () => {
-  if (navOpen === false) {
+navBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  clearTimeout(); // stop any mobile nav animations upon click
+
+  if (isNavOpen === false) {
     openNavList();
     show();
-    navOpen = true;
+    isNavOpen = true;
   } else {
-    closeNavList();
+    setTimeout(closeNavList, 1200); // WIP - adjust timing!!!
     hide();
-    navOpen = false;
+    isNavOpen = false;
   }
+
+  e.stopPropogation();
 });
 
 window.addEventListener('resize', () => {
   // remove all hide classes on resize
   removeAll();
+
+  // remove text-show classes as well
+  discoverText.classList.remove('discover-text-show');
+  aboutText.classList.remove('about-text-show');
+  sellText.classList.remove('sell-text-show');
+
   // nav should always be open at large screen sizes
-  if (window.innerWidth >= windowSize) {
+  if (window.innerWidth >= desktopWindowSizeBreakpoint) {
     openNavList();
   // the intial state of the nav should be closed at small screens
-  } else if (window.innerWidth < windowSize && initialWindowState === true) {
+  // eslint-disable-next-line max-len
+  } else if (window.innerWidth < desktopWindowSizeBreakpoint && initialWindowStateIsDesktop === true) {
     closeNavList();
-    navOpen = false;
-    initialWindowState = false; // causes a double click to open
+    isNavOpen = false;
+    initialWindowStateIsDesktop = false;
   // keep the nav list closed on window resize if the `Close` button has been clicked
-  } else if (window.innerWidth < windowSize && navOpen === false) {
+  } else if (window.innerWidth < desktopWindowSizeBreakpoint && isNavOpen === false) {
     closeNavList();
   }
 });
 
 // when a mobile nav item is clicked upon, close the mobile nav and remove mobile animation classes
-discoverListItem.addEventListener('click', () => {
-  if (window.innerWidth < windowSize) {
+function listItemClick() {
+  if (window.innerWidth > desktopWindowSizeBreakpoint) {
     closeMobileNavOnClick();
-    navOpen = false;
+    openNavList();
+    isNavOpen = true;
+    initialWindowStateIsDesktop = true;
+  } else {
+    closeMobileNavOnClick();
+    isNavOpen = false;
+    closeNavList();
   }
+}
+
+discoverListItem.addEventListener('click', () => {
+  listItemClick();
 });
 
 aboutListItem.addEventListener('click', () => {
-  if (window.innerWidth < windowSize) {
-    closeMobileNavOnClick();
-    navOpen = false;
-  }
+  listItemClick();
 });
 
 sellListItem.addEventListener('click', () => {
-  if (window.innerWidth < windowSize) {
-    closeMobileNavOnClick();
-    navOpen = false;
-  }
+  listItemClick();
 });

@@ -14,6 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: $c-white;
     padding: 1.75rem;
     height: 14.25vh;
 
@@ -28,6 +29,7 @@
     }
 
     @media (min-width: $bp-unstack-nav) {
+      position: relative;
       justify-content: center;
       height: auto;
 
@@ -63,15 +65,6 @@
       text-align: right;
       padding-bottom: 0;
     }
-
-    &.expand-nav.hide-nav {
-      left: 0;
-      overflow: visible !important;
-    }
-
-    &.hide-nav { // delayed via JS for animation to complete
-      overflow: hidden;
-    }
   }
 
   &__list {
@@ -86,6 +79,11 @@
     position: relative;
 
     &[aria-hidden="true"] {
+      overflow-x: hidden;
+
+      @media (min-width: $bp-unstack-nav) {
+        overflow-x: auto;
+      }
 
       & .c-header__item--discover,
       & .c-header__item--about,
@@ -125,7 +123,7 @@
     display: flex;
     position: absolute;
     width: 100vw;
-    height: 33.333%;
+    height: 33.34%;
 
     @media (min-width: $bp-unstack-nav) {
       padding-right: 5vw;
@@ -170,20 +168,19 @@
       left: 0;
 
       &.discover-show {
-        transition: left 400ms ease-in-out;
+        animation-duration: 400ms;
+        animation-timing-function: ease;
+        animation-name: showNavItem;
       }
 
       &.discover-hide {
-        transition: left 400ms ease-in-out 600ms;
-
-        @media (min-width: $bp-unstack-nav) {
-          transition: unset;
-        }
+        animation-duration: 1200ms;
+        animation-fill-mode: forwards;
+        animation-name: hideNavItem;
       }
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
-        transition: unset;
       }
     }
 
@@ -192,20 +189,19 @@
       left: 0;
 
       &.about-show {
-        transition: left 400ms ease-in-out 300ms;
+        animation-duration: 800ms;
+        animation-timing-function: ease;
+        animation-name: showNavItem;
       }
 
       &.about-hide {
-        transition: left 400ms ease-in-out 300ms;
-
-        @media (min-width: $bp-unstack-nav) {
-          transition: unset;
-        }
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
+        animation-name: hideNavItem;
       }
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
-        transition: unset;
       }
     }
 
@@ -215,20 +211,19 @@
       left: 0;
 
       &.sell-show {
-        transition: left 400ms ease-in-out 600ms;
+        animation-duration: 1200ms;
+        animation-timing-function: ease;
+        animation-name: showNavItem;
       }
 
       &.sell-hide {
-        transition: left 400ms ease-in-out;
-
-        @media (min-width: $bp-unstack-nav) {
-          transition: unset;
-        }
+        animation-duration: 400ms;
+        animation-fill-mode: forwards;
+        animation-name: hideNavItem;
       }
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
-        transition: unset;
       }
     }
   }
@@ -244,34 +239,45 @@
     padding: 0 3.5rem 0 0.75rem;
     margin: auto;
     line-height: 1.25;
-    right: -50%;
+    left: 50%;
     width: 50%;
 
     &--discover.discover-text-show {
-      right: 0;
-      transition: right 600ms ease-in-out;
+      animation-duration: 600ms;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-name: showText;
     }
 
     &--discover.discover-text-hide {
-      transition: right 600ms ease-in-out 600ms;
+      animation-duration: 1200ms;
+      animation-name: hideText;
     }
 
     &--about.about-text-show {
       right: 0;
-      transition: right 600ms ease-in-out 300ms;
+      animation-duration: 900ms;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-name: showText;
     }
 
     &--about.about-text-hide {
-      transition: right 600ms ease-in-out 300ms;
+      animation-duration: 900ms;
+      animation-name: hideText;
     }
 
     &--sell.sell-text-show {
       right: 0;
-      transition: right 600ms ease-in-out 600ms;
+      animation-duration: 1200ms;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-name: showText;
     }
 
     &--sell.sell-text-hide {
-      transition: right 600ms ease-in-out;
+      animation-duration: 600ms;
+      animation-name: hideText;
     }
 
     @media (min-width: $bp-unstack-nav) {
@@ -279,7 +285,7 @@
       font-size: 1rem;
       padding: 0;
       position: relative;
-      right: 0;
+      left: 0;
 
       // let's add a nice transition to the arrow icon
       &::before {
@@ -319,7 +325,7 @@
   &__animal {
     flex-basis: 50%;
     transform: translateX(0);
-    transition: transform 300ms ease;
+    transition: transform 250ms ease;
 
     &--bear {
       background: no-repeat top 30% right -15% / 155%;
@@ -351,5 +357,63 @@
     @media (min-width: $bp-unstack-nav) {
       display: none;
     }
+  }
+}
+
+@keyframes showNavItem {
+  from {
+    left: 100vw;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes showText {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes hideNavItem {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100vw;
+  }
+}
+
+@keyframes hideText {
+  0% {
+    left: 50%;
+  }
+
+  100% {
+    left: 100vw;
+  }
+}
+
+// move to body scss file??????
+.mobile-nav-closed {
+  overflow-x: hidden;
+}
+
+.mobile-nav-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+
+  @media (min-width: $bp-unstack-nav) {
+    position: relative; // unset for desktop screen size
   }
 }
