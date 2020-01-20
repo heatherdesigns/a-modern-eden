@@ -322,15 +322,30 @@
     transition: transform 300ms ease;
 
     &--bear {
-      background: no-repeat top 30% right -15% / 155% url(/images/bear.svg);
+      background: no-repeat top 30% right -15% / 155%;
+      background-image: url(/images/bear.png);
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 220dpi) {
+        background-image: url(/images/bear2x.png);
+      }
     }
 
     &--cow {
-      background: no-repeat top 34% right 34% / 190% url(/images/cow.svg);
+      background: no-repeat top 4% right 38% / 120%;
+      background-image: url(/images/cow.png);
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 220dpi) {
+        background-image: url(/images/cow2x.png);
+      }
     }
 
     &--elephant {
-      background: no-repeat top 45% right 27% / 197% url(/images/elephant.svg);
+      background: no-repeat top 30% right / 148%;
+      background-image: url(/images/elephant.png);
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 220dpi) {
+        background-image: url(/images/elephant2x.png);
+      }
     }
 
     @media (min-width: $bp-unstack-nav) {
