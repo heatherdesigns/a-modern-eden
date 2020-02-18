@@ -113,7 +113,7 @@
     &:active {
       .c-header__animal--bear,
       .c-header__animal--cow,
-      .c-header__animal--elephant {
+      .c-header__animal--dolphin {
         transform: translateX(-3px);
       }
     }
@@ -123,7 +123,7 @@
     display: flex;
     position: absolute;
     width: 100vw;
-    height: 33.34%;
+    height: 28.5vh; // was 33.34% // needs to add up to 85.75
 
     @media (min-width: $bp-unstack-nav) {
       padding-right: 5vw;
@@ -166,6 +166,7 @@
       background-color: $c-soft-grey;
       top: 0;
       left: 0;
+      height: 25vh;
 
       &.discover-show {
         animation-duration: 400ms;
@@ -181,12 +182,15 @@
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
+        height: auto;
       }
     }
 
     &--about {
       background-color: $c-pretty-in-pink;
       left: 0;
+      height: 25vh;
+      top: 25vh;
 
       &.about-show {
         animation-duration: 800ms;
@@ -202,13 +206,16 @@
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
+        height: auto;
+        top: 0;
       }
     }
 
     &--sell {
-      background-color: $c-ocean;
+      background-color: $c-white;
       bottom: 0;
       left: 0;
+      height: 35.75vh;
 
       &.sell-show {
         animation-duration: 1200ms;
@@ -224,6 +231,7 @@
 
       @media (min-width: $bp-unstack-nav) {
         background-color: transparent;
+        height: auto;
       }
     }
   }
@@ -345,14 +353,26 @@
       }
     }
 
-    &--elephant {
-      background: no-repeat top 30% right / 148%;
-      background-image: url(/images/elephant.png);
+    &--dolphin {
+      background: no-repeat top -3% right -18% / 133%;
+      background-image: url(/images/dolphin.png);
 
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 220dpi) {
-        background-image: url(/images/elephant2x.png);
+        background-image: url(/images/dolphin2x.png);
       }
     }
+
+    @media (min-width: $bp-unstack-nav) {
+      display: none;
+    }
+  }
+
+  &__ocean-block {
+    background-color: $c-ocean;
+    height: 10.75vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
 
     @media (min-width: $bp-unstack-nav) {
       display: none;

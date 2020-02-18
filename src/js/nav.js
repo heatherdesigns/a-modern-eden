@@ -97,19 +97,22 @@ if (window.innerWidth >= desktopWindowSizeBreakpoint) {
 
 navBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  clearTimeout(); // stop any mobile nav animations upon click
+  // clearTimeout(); // stop any mobile nav animations upon click
 
   if (isNavOpen === false) {
     openNavList();
     show();
     isNavOpen = true;
   } else {
-    setTimeout(closeNavList, 1200); // WIP - adjust timing!!!
+    // setTimeout(closeNavList, 1200); // WIP - adjust timing!!!
+    navBtn.textContent = 'Menu';
+    document.body.classList.add('mobile-nav-closed');
+    document.body.classList.remove('mobile-nav-open');
     hide();
     isNavOpen = false;
   }
 
-  e.stopPropogation();
+  // e.stopPropogation();
 });
 
 window.addEventListener('resize', () => {
