@@ -123,7 +123,7 @@
     display: flex;
     position: absolute;
     width: 100vw;
-    height: 28.5vh; // was 33.34% // needs to add up to 85.75
+    height: 28.5vh; // 3 items * 28.5 = ~85.75
 
     @media (min-width: $bp-unstack-nav) {
       padding-right: 5vw;
@@ -275,6 +275,10 @@
       animation-name: hideText;
     }
 
+    &--sell {
+      padding-bottom: 10.75vh; // make room for ocean waves
+    }
+
     &--sell.sell-text-show {
       right: 0;
       animation-duration: 1200ms;
@@ -354,7 +358,7 @@
     }
 
     &--dolphin {
-      background: no-repeat top -3% right -18% / 133%;
+      background: no-repeat top -15% right -18% / 133%;
       background-image: url(/images/dolphin.png);
 
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 220dpi) {
@@ -368,11 +372,11 @@
   }
 
   &__ocean-block {
-    background-color: $c-ocean;
-    height: 10.75vh;
+    background: repeat-x 100%/70% url(/images/ocean-wave.png);
+    height: 20.75vh;
     width: 100vw;
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
 
     @media (min-width: $bp-unstack-nav) {
       display: none;
@@ -420,7 +424,7 @@
   }
 }
 
-// move to body scss file??????
+// These nav classes are applied to the body
 .mobile-nav-closed {
   overflow-x: hidden;
 }
