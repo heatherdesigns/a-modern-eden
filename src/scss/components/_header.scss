@@ -16,7 +16,11 @@
     align-items: center;
     background-color: $c-white;
     padding: 1.75rem;
-    height: 14.25vh;
+    height: 12.25vh;
+
+    @media (min-width: $bp-xs) {
+      height: 14.25vh;
+    }
 
     & img {
       width: 55%;
@@ -49,8 +53,13 @@
 
   &__nav {
     position: absolute;
-    height: 85.75vh;
-    top: 14.25vh;
+    height: 87.75vh;
+    top: 12.25vh;
+
+    @media (min-width: $bp-xs) {
+      height: 85.75vh;
+      top: 14.25vh;
+    }
 
     @media (min-width: $bp-unstack-nav) {
       position: relative;
@@ -108,6 +117,7 @@
     display: flex;
     width: 100%;
     text-decoration: none;
+    position: relative;
 
     &:hover,
     &:active {
@@ -215,7 +225,11 @@
       background-color: $c-white;
       bottom: 0;
       left: 0;
-      height: 35.75vh;
+      height: 37.75vh;
+
+      @media (min-width: $bp-xs) {
+        height: 35.75vh;
+      }
 
       &.sell-show {
         animation-duration: 1200ms;
@@ -276,7 +290,12 @@
     }
 
     &--sell {
-      padding-bottom: 10.75vh; // make room for ocean waves
+      padding-bottom: 12.75vh; // make room for ocean waves
+      z-index: 100;
+
+      @media (min-width: $bp-xs) {
+        padding-bottom: 10.75vh;
+      }
     }
 
     &--sell.sell-text-show {
@@ -372,11 +391,17 @@
   }
 
   &__ocean-block {
-    background: repeat-x 100%/70% url(/images/ocean-wave.png);
-    height: 20.75vh;
+    background: repeat-x 100%/70% url(/images/ocean.png);
+    height: 32vh;
     width: 100vw;
     position: absolute;
-    bottom: 3%;
+    // ocean wave at device widths
+    bottom: -5.75vh;
+
+    // ocean wave at smallest browser width
+    @media (min-width: $bp-xs) {
+      bottom: -10.75vh;
+    }
 
     @media (min-width: $bp-unstack-nav) {
       display: none;

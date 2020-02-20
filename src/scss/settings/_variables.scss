@@ -9,6 +9,7 @@ $font-stack-decorative-variable: "PersonalitypeVariable", cursive;
 //
 // BREAKPOINTS
 //
+$bp-xs: 28rem;
 $bp-sm: 30rem;
 $bp-md: 50rem;
 $bp-lg: 60rem;
@@ -24,10 +25,16 @@ $grid-breakpoints: (
 $bp-unstack-nav: 40rem;
 
 //
+// VERTICAL BREAKPOINTS
+//
+$bp-short: 35rem;
+$bp-average: 50rem;
+$bp-tall: 65rem;
+
+//
 // LENGTHS
 //
 $page-margin: 1.75rem;
-
 $max-page-width: 78rem;
 
 //
