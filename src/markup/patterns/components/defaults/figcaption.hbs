@@ -1,0 +1,22 @@
+---
+notes: |
+  Every alphabet letter and coordinating illustrated animal has a figcaption which describes its playful attributes.
+links:
+  MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption
+
+variantGroups:
+  - name: Letter Color
+    set:
+      - c-figcaption__letter--monkey-brown
+      - c-figcaption__letter--rooster-red
+      - c-figcaption__letter--pretty-in-pink
+      - c-figcaption__letter--piggy-pink
+      - c-figcaption__letter--ocean
+      - c-figcaption__letter--dolphin-blue
+      - c-figcaption__letter--froggy-yellowgreen
+
+letter: A
+caption: is for a delightful caption
+---
+
+<figcaption class="c-figcaption"><span class="c-figcaption__letter {{ letterModifier }}">{{ letter }}</span>&nbsp;{{ caption }}</figcaption>

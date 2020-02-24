@@ -1,0 +1,38 @@
+.c-figcaption {
+  @include font-stack-decorative;
+  color: $c-charcoal;
+
+  &__letter {
+    @include font-stack-primary($weight: 700);
+    font-size: 1.875rem;
+
+    // add modifier classes
+    &--monkey-brown {
+      color: $c-monkey-brown;
+    }
+
+    &--rooster-red {
+      color: $c-rooster-red;
+    }
+
+    &--pretty-in-pink {
+      color: $c-pretty-in-pink;
+    }
+
+    &--piggy-pink {
+      color: $c-piggy-pink;
+    }
+
+    &--ocean {
+      color: $c-ocean;
+    }
+
+    &--dolphin-blue {
+      color: $c-dolphin-blue;
+    }
+
+    &--froggy-yellowgreen {
+      color: $c-froggy-yellowgreen;
+    }
+  }
+}

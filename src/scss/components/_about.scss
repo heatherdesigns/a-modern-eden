@@ -1,0 +1,14 @@
+.c-about {
+  background-color: $c-pretty-in-pink;
+
+  &__title {
+    @include h2;
+    margin-bottom: 2.25rem;
+  }
+
+  &__copy {
+    font-size: 1.5rem;
+    color: $c-charcoal;
+    // margin: 0 0 space(lg);
+  }
+}
