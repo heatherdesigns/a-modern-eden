@@ -95,7 +95,10 @@
 @import "components/header";
 @import "components/footer";
 @import "components/about";
-@import "components/figcaption";
+@import "components/caption";
+
+// Animals
+@import "components/cow";
 
 // =====================================================================
 // 7. Vendors
@@ -113,3 +116,4 @@
 @import "utilities/spacing";
 @import "utilities/text";
 @import "utilities/grid";
+@import "utilities/position";

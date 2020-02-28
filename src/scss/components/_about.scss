@@ -9,6 +9,26 @@
   &__copy {
     font-size: 1.5rem;
     color: $c-charcoal;
+    margin-right: 3rem; // look at spacing classes / variables
     // margin: 0 0 space(lg);
+  }
+
+  &__caption {
+    // styles go here
+  }
+
+  &__alphabet-letter {
+    @include alphabet-letter($c-piggy-pink);
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 200px;
+  }
+
+  &__animal {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: -9px;
   }
 }

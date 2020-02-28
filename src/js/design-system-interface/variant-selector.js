@@ -7,6 +7,10 @@ const variantsData = variantsBoxes.map((v) => {
   const originalPattern = patternContainer.children[0].cloneNode(true);
   const variantGroups = [...v.querySelectorAll('.drizzle-pattern__variant-group')];
 
+  console.log(source);
+  console.log(root);
+  console.log(patternContainer);
+
   return {
     dom: v,
     root,

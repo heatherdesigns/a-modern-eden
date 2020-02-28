@@ -45,6 +45,14 @@ $c-froggy-yellowgreen: #E3E65B;
 // STYLES
 //
 
+.drizzle-Item-control {
+  color: $c-rooster-red;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .drizzle-variant-button {
   border: none;
   margin: 0;

@@ -187,3 +187,10 @@
     font-variation-settings: "wght" 700;
   }
 }
+
+@mixin alphabet-letter($color: $c-monkey-brown) {
+  @include font-stack-primary($weight: 700);
+  color: $color;
+  font-size: 26.875rem;
+  line-height: 0.65;
+}
