@@ -1,0 +1,66 @@
+@mixin default-ol-ul {
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  line-height: 2;
+  font-size: 1.125rem;
+
+  list-style-type: none;
+
+  counter-reset: generic-ol-counter;
+
+  > li {
+    position: relative;
+
+    &:not(:last-child) {
+      padding-bottom: space(xs);
+    }
+  }
+}
+
+@mixin default-ol {
+  > li {
+    line-height: 2;
+    font-size: 1.125rem;
+
+    &::before {
+      @include font-stack-decorative;
+      color: $c-rooster-red;
+
+      counter-increment: generic-ol-counter;
+      content: counter(generic-ol-counter) ". ";
+
+      position: absolute;
+      right: 100%;
+      margin-right: 0.5rem;
+
+      font-size: 1.25rem;
+
+      // Try to align these baselines with text baselines
+      margin-top: -0.35rem;
+    }
+  }
+}
+
+@mixin default-ul {
+  > li {
+    line-height: 2;
+    font-size: 1.125rem;
+
+    &::before {
+      content: '';
+      background-color: $c-froggy-yellowgreen;
+
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+
+      border-radius: 50%;
+
+      margin-left: -1rem;
+      margin-right: 0.75rem;
+
+      position: relative;
+      top: -0.1rem;
+    }
+  }
+}

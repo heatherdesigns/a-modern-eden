@@ -1,20 +1,47 @@
 .c-about {
   background-color: $c-pretty-in-pink;
 
+  @media (min-width: $bp-xs) {
+    background-color: cyan;
+  }
+
+  @media (min-width: $bp-sm) {
+    background-color: magenta;
+  }
+
+  @media (min-width: $bp-md) {
+    background-color: yellow;
+  }
+
+  @media (min-width: $bp-lg) {
+    background-color: hotpink;
+  }
+
+  @media (min-width: $bp-xl) {
+    background-color: yellowgreen; // good!
+  }
+
+  &__container {
+    position: relative;
+    padding-top: 4.875rem;
+    padding-bottom: 10rem;
+  }
+
   &__title {
     @include h2;
     margin-bottom: 2.25rem;
   }
 
   &__copy {
+    @include default-paragraph;
     font-size: 1.5rem;
+    line-height: 1.375;
     color: $c-charcoal;
-    margin-right: 3rem; // look at spacing classes / variables
-    // margin: 0 0 space(lg);
+    margin-right: space(xl);
   }
 
   &__caption {
-    // styles go here
+    margin: -1rem 0 0 4.5rem;
   }
 
   &__alphabet-letter {
@@ -22,11 +49,10 @@
     display: inline-block;
     position: absolute;
     bottom: 0;
-    right: 200px;
+    right: 225px;
   }
 
   &__animal {
-    display: inline-block;
     position: absolute;
     right: 0;
     bottom: -9px;

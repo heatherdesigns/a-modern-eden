@@ -1,6 +1,7 @@
 .c-caption {
   @include font-stack-decorative;
   color: $c-charcoal;
+  line-height: 32px;
 
   &__letter {
     @include font-stack-primary($weight: 700);
