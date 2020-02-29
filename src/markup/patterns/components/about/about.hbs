@@ -5,18 +5,20 @@ name: About
 <section id="about" class="c-about">
   <div class="c-about__container o-grid o-width-limiter o-width-limiter--sm">
     <h2 class="c-about__title o-grid__full">About</h2>
-    <p class="c-about__copy o-grid__third">Our journey began in 2011 when illustrator Ryan Clark drew an owl in the iconic style of mid-century modern illustrator Charlie Harper for his soon-to-be son’s new nursery. Then he kept drawing &#8212; and drawing. Today, a Modern Eden is an artful line of toys and decor centered around 40+ unique animal illustrations.</p>
-    <p class="c-about__copy o-grid__third">Discover a world where education mixes with play. Where amazing antelopes, buzzing bumble bees, clever cheetahs, and delightful dolphins come together to create a learning experience artistically adorned in classic comtemporary decor.</p>
+    <p class="c-about__copy o-grid__full o-grid__half@lg o-grid__third@xl">Our journey began in 2011 when illustrator Ryan Clark drew an owl in the iconic style of mid-century modern illustrator Charlie Harper for his soon-to-be son’s new nursery. Then he kept drawing &#8212; and drawing. Today, a Modern Eden is an artful line of toys and decor centered around 40+ unique animal illustrations.</p>
+    <p class="c-about__copy o-grid__full o-grid__half@lg o-grid__third@xl">Discover a world where education mixes with play. Where amazing antelopes, buzzing bumble bees, clever cheetahs, and delightful dolphins come together to create a learning experience artistically adorned in classic comtemporary decor.</p>
 
-    <div class="o-grid__third">
+    <div class="c-about__ame-grouping o-grid__full o-grid__full@md o-grid__half@lg o-grid__third@xl">
       <div class="c-about__caption">
         {{> patterns.components.defaults.caption letter="C" letterModifier="c-caption__letter--piggy-pink" caption="is for clever cows and contemporary decor" }}
       </div>
-      <div class="c-about__alphabet-letter">C</div>
-      <div class="c-about__animal">
-        {{> patterns.components.animals.cow }}
+      {{!-- <div class="c-about__ame-graphic"> --}}
+        <div class="c-about__alphabet-letter">C</div>
+        <div class="c-about__animal">
+          {{> patterns.components.animals.cow }}
+        </div>
       </div>
-    </div>
+    {{!-- </div> --}}
 
   </div>
 </section>

@@ -1,10 +1,6 @@
 .c-about {
   background-color: $c-pretty-in-pink;
 
-  @media (min-width: $bp-xs) {
-    background-color: cyan;
-  }
-
   @media (min-width: $bp-sm) {
     background-color: magenta;
   }
@@ -14,11 +10,15 @@
   }
 
   @media (min-width: $bp-lg) {
+    background-color: #fff;
+  }
+
+  @media (min-width: 70rem) { // 70rem // inbetween lg and xl
     background-color: hotpink;
   }
 
   @media (min-width: $bp-xl) {
-    background-color: yellowgreen; // good!
+    background-color: yellowgreen;
   }
 
   &__container {
@@ -34,14 +34,73 @@
 
   &__copy {
     @include default-paragraph;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.375;
     color: $c-charcoal;
-    margin-right: space(xl);
+    margin-right: 0; // single column
+
+    @media (min-width: $bp-sm) {
+      font-size: 1.5rem;
+      line-height: 1.375;
+    }
+
+    @media (min-width: $bp-md) {
+      margin-right: 7rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      margin-right: space(xl);
+    }
+  }
+
+  &__ame-grouping {
+    margin-bottom: 3rem;
+
+    @media (min-width: $bp-sm) {
+      background-color: magenta;
+      // margin-bottom: 0; // wip
+    }
+
+    @media (min-width: $bp-md) {
+      background-color: yellow;
+    }
+
+    @media (min-width: $bp-lg) {
+      margin-top: 4rem;
+      margin-left: 2rem;
+      justify-self: center;
+    }
+
+    @media (min-width: 70rem) { // 70rem // inbetween lg and xl
+      justify-self: end;
+      margin-left: 0;
+    }
+
+    @media (min-width: $bp-xl) {
+      margin: 0;
+      justify-self: unset;
+    }
   }
 
   &__caption {
-    margin: -1rem 0 0 4.5rem;
+
+    @media (min-width: $bp-sm) {
+      background-color: magenta;
+      max-width: 15.625rem;
+    }
+
+    @media (min-width: $bp-md) {
+      background-color: yellow;
+      // margin: -1rem 0 0 4.5rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      margin: 0 0 0 0;
+    }
+
+    @media (min-width: $bp-xl) {
+      margin: -1rem 0 0 4.5rem;
+    }
   }
 
   &__alphabet-letter {
@@ -49,12 +108,41 @@
     display: inline-block;
     position: absolute;
     bottom: 0;
-    right: 225px;
+
+    @media (min-width: $bp-sm) {
+      right: 225px;
+    }
+
+    @media (min-width: $bp-md) {
+    }
+
+    @media (min-width: $bp-lg) {
+      right: 325px;
+    }
+
+    @media (min-width: $bp-xl) {
+      right: 225px;
+    }
   }
 
   &__animal {
     position: absolute;
-    right: 0;
+    right: 15px;
     bottom: -9px;
+
+    @media (min-width: $bp-sm) {
+      // right: unset;
+    }
+
+    @media (min-width: $bp-md) {
+    }
+
+    @media (min-width: $bp-lg) {
+      right: 100px;
+    }
+
+    @media (min-width: $bp-xl) {
+      right: 0;
+    }
   }
 }

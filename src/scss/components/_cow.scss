@@ -1,3 +1,7 @@
 .c-cow {
-  height: 19.6875rem;
+  height: 12rem;
+
+  @media (min-width: $bp-sm) {
+    height: 19.6875rem;
+  }
 }
