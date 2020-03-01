@@ -1,30 +1,14 @@
 .c-about {
   background-color: $c-pretty-in-pink;
 
-  @media (min-width: $bp-sm) {
-    background-color: magenta;
-  }
-
-  @media (min-width: $bp-md) {
-    background-color: yellow;
-  }
-
-  @media (min-width: $bp-lg) {
-    background-color: #fff;
-  }
-
-  @media (min-width: 70rem) { // 70rem // inbetween lg and xl
-    background-color: hotpink;
-  }
-
-  @media (min-width: $bp-xl) {
-    background-color: yellowgreen;
-  }
-
   &__container {
     position: relative;
-    padding-top: 4.875rem;
+    padding-top: space(xxl);
     padding-bottom: 10rem;
+
+    @media (min-width: $bp-sm) {
+      padding-top: 4.875rem;
+    }
   }
 
   &__title {
@@ -37,7 +21,7 @@
     font-size: 1.25rem;
     line-height: 1.375;
     color: $c-charcoal;
-    margin-right: 0; // single column
+    margin-right: 0;
 
     @media (min-width: $bp-sm) {
       font-size: 1.5rem;
@@ -54,20 +38,19 @@
   }
 
   &__ame-grouping {
-    margin-bottom: 3rem;
+    margin-bottom: 5.25rem;
 
     @media (min-width: $bp-sm) {
-      background-color: magenta;
-      // margin-bottom: 0; // wip
+      margin-bottom: 10rem;
     }
 
     @media (min-width: $bp-md) {
-      background-color: yellow;
+      margin-bottom: 8rem;
     }
 
     @media (min-width: $bp-lg) {
-      margin-top: 4rem;
-      margin-left: 2rem;
+      margin: 4rem 0 0 2rem;
+      margin-bottom: unset;
       justify-self: center;
     }
 
@@ -83,15 +66,14 @@
   }
 
   &__caption {
+    max-width: 15.625rem;
 
     @media (min-width: $bp-sm) {
-      background-color: magenta;
-      max-width: 15.625rem;
+      margin: space(md) 0 0 space(xl);
     }
 
     @media (min-width: $bp-md) {
-      background-color: yellow;
-      // margin: -1rem 0 0 4.5rem;
+      margin: 2rem 0 0 space(xxl);
     }
 
     @media (min-width: $bp-lg) {
@@ -108,12 +90,14 @@
     display: inline-block;
     position: absolute;
     bottom: 0;
+    right: 140px;
 
     @media (min-width: $bp-sm) {
       right: 225px;
     }
 
     @media (min-width: $bp-md) {
+      right: 275px;
     }
 
     @media (min-width: $bp-lg) {
@@ -127,14 +111,15 @@
 
   &__animal {
     position: absolute;
-    right: 15px;
+    right: 0;
     bottom: -9px;
 
     @media (min-width: $bp-sm) {
-      // right: unset;
+      right: 0;
     }
 
     @media (min-width: $bp-md) {
+      right: 50px;
     }
 
     @media (min-width: $bp-lg) {
