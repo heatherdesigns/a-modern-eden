@@ -11,7 +11,7 @@
     }
 
     @media (min-width: $bp-lg) {
-      padding-top: 4.755rem;
+      padding-top: 4.75rem;
     }
   }
 
@@ -26,5 +26,15 @@
 
   &__copy {
     // add styles if needed, delete if not
+  }
+
+  &__image {
+    &--iphone {
+      //
+    }
+
+    &--ipad {
+      //
+    }
   }
 }
