@@ -4,7 +4,7 @@
   &__container {
     position: relative;
     padding-top: space(xl);
-    padding-bottom: 7.1875rem;
+    padding-bottom: 5rem;
 
     @media (min-width: $bp-md) {
       padding-top: space(xl);
@@ -12,6 +12,38 @@
 
     @media (min-width: $bp-lg) {
       padding-top: 4.75rem;
+      padding-bottom: 7.1875rem;
+    }
+  }
+
+  &__app-wrap {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $bp-md) {
+      flex-direction: row;
+    }
+
+    &:first-of-type {
+      margin-bottom: space(xl);
+
+      @media (min-width: $bp-sm) {
+        flex-direction: row;
+      }
+
+      @media (min-width: $bp-lg) {
+        margin-right: 4.75rem;
+      }
+    }
+
+    &:last-of-type {
+      @media (min-width: $bp-lg) {
+        flex-direction: column;
+      }
+
+      @media (min-width: $bp-xl) {
+        flex-direction: row;
+      }
     }
   }
 
@@ -25,16 +57,56 @@
   }
 
   &__copy {
-    // add styles if needed, delete if not
+    @include default-paragraph;
+
+    @media (min-width: $bp-md) {
+      width: 80%;
+    }
+
+    @media (min-width: $bp-lg) {
+      width: 100%;
+    }
+  }
+
+  &__speak-piggy-copy-block {
+    margin-bottom: space(lg);
+
+    @media (min-width: $bp-sm) {
+      margin-bottom: space(xl);
+    }
   }
 
   &__image {
+    margin-bottom: space(lg);
+    align-self: center;
+
+    @media (min-width: $bp-sm) {
+      align-self: flex-start;
+    }
+
     &--iphone {
-      //
+      @media (min-width: $bp-sm) {
+        margin-right: space(lg);
+      }
+
+      @media (min-width: $bp-md) {
+        margin-right: space(xl);
+      }
     }
 
     &--ipad {
-      //
+      @media (min-width: $bp-md) {
+        margin-right: space(xl);
+      }
+
+      @media (min-width: $bp-lg) {
+        margin-right: 0;
+        margin-bottom: space(xl);
+      }
+
+      @media (min-width: $bp-xl) {
+        margin-right: space(xl);
+      }
     }
   }
 }
