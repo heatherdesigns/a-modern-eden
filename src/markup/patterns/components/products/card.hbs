@@ -1,0 +1,20 @@
+---
+name: Product Card
+
+product: Screen Printed Posters
+img: https://dummyimage.com/550x300/F8A9A9/ffffff
+alt: AME screen printed frog, lion, and peacock posters
+copy: |
+  12" x 16" Hand screen printed posters on French 100 lb. cover colored paper. Pick from any of the animals in the AME kingdom.
+---
+
+<section class="c-products__card">
+  <img src="{{ img }}" alt="{{ alt }}" class="c-products__img">
+  <div class="c-products__details">
+    <div>
+      <h3 class="c-products__name">{{ product }}</h3>
+      <div class="c-products__copy">{{ copy }}</div>
+    </div>
+    <a href="#whereToBuy" class="c-btn c-btn--primary c-products__btn">where to buy</a>
+  </div>
+</section>
