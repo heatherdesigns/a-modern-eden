@@ -1,5 +1,21 @@
 .c-products {
 
+  // @media (min-width: $bp-sm) {
+  //   background-color: #78DFD7;
+  // }
+
+  @media (min-width: $bp-md) {
+    background-color: #78B3DF;
+  }
+
+  @media (min-width: $bp-lg) {
+    background-color: #7880DF;
+  }
+
+  @media (min-width: $bp-xl) {
+    background-color: #A478DF;
+  }
+
   &__container {
     position: relative;
     padding-top: space(xl);
@@ -24,43 +40,67 @@
   }
 
   &__card {
-    &:nth-child(even) {
-      margin-right: 4.5rem;
-    }
+    margin-bottom: 4.5rem;
 
-    &:nth-child(odd) {
-      margin-left: 4.5rem;
-    }
-  }
+    @media (min-width: $bp-md) {
+      &:nth-child(even) {
+        margin-right: 4.5rem;
+      }
 
-  &__card {
-    //
+      &:nth-child(odd) {
+        margin-left: 4.5rem;
+      }
+    }
   }
 
   &__name {
     @include h3;
     margin-bottom: 0.875rem;
+
+    @media (min-width: $bp-sm) {
+      flex: 2;
+      order: 1;
+    }
   }
 
   &__img {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 100%;
+
+    @media (min-width: $bp-md) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__copy {
     @include default-paragraph;
+
+    @media (min-width: $bp-sm) {
+      flex-basis: 75%;
+      order: 3;
+      margin-top: 0.5rem;
+    }
   }
 
   &__details {
-    display: flex;
 
-    div {
-      margin-right: 56px;
+    @media (min-width: $bp-sm) {
+      display: flex;
+      flex-wrap: wrap;
     }
+
+    // div {
+    //   margin-right: 56px;
+    // }
   }
 
   &__btn {
     flex-shrink: 0;
     height: 100%;
+
+    @media (min-width: $bp-sm) {
+      margin-top: 0.5rem;
+      order: 2;
+    }
   }
 }
