@@ -24,6 +24,16 @@
   }
 
   &__card {
+    &:nth-child(even) {
+      margin-right: 4.5rem;
+    }
+
+    &:nth-child(odd) {
+      margin-left: 4.5rem;
+    }
+  }
+
+  &__card {
     //
   }
 

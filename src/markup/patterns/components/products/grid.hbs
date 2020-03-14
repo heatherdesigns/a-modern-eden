@@ -5,8 +5,14 @@ name: Product Grid
 <section id="products" class="c-prodcuts">
   <div class="c-products__container o-grid o-width-limiter o-width-limiter--sm">
     <h2 class="c-products__title o-grid__full">Products</h2>
-    {{#with (data 'products')}}
-      {{> patterns.components.products.card }}
-    {{/width}}
+    {{!-- <div class="c-products__list"> --}}
+      {{#with (data 'products')}}
+        {{#each items }}
+          {{!-- <div class="c-products__card o-grid__full o-grid__half@md"> --}}
+            {{> patterns.components.products.card }}
+          {{!-- </div> --}}
+        {{/each}}
+      {{/with}}
+    {{!-- </div> --}}
   </div>
 </section>
