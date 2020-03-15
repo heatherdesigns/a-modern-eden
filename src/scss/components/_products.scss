@@ -1,21 +1,4 @@
 .c-products {
-
-  // @media (min-width: $bp-sm) {
-  //   background-color: #78DFD7;
-  // }
-
-  @media (min-width: $bp-md) {
-    background-color: #78B3DF;
-  }
-
-  @media (min-width: $bp-lg) {
-    background-color: #7880DF;
-  }
-
-  @media (min-width: $bp-xl) {
-    background-color: #A478DF;
-  }
-
   &__container {
     position: relative;
     padding-top: space(xl);
@@ -44,6 +27,26 @@
 
     @media (min-width: $bp-md) {
       &:nth-child(even) {
+        margin-right: 1.675rem;
+      }
+
+      &:nth-child(odd) {
+        margin-left: 1.675rem;
+      }
+    }
+
+    @media (min-width: $bp-lg) {
+      &:nth-child(even) {
+        margin-right: 2.75rem;
+      }
+
+      &:nth-child(odd) {
+        margin-left: 2.75rem;
+      }
+    }
+
+    @media (min-width: $bp-xl) {
+      &:nth-child(even) {
         margin-right: 4.5rem;
       }
 
@@ -64,7 +67,7 @@
   }
 
   &__img {
-    margin-bottom: 1rem;
+    margin-bottom: space(md);
     width: 100%;
 
     @media (min-width: $bp-md) {
@@ -78,7 +81,7 @@
     @media (min-width: $bp-sm) {
       flex-basis: 75%;
       order: 3;
-      margin-top: 0.5rem;
+      margin-top: space(sm);
     }
   }
 
@@ -88,10 +91,6 @@
       display: flex;
       flex-wrap: wrap;
     }
-
-    // div {
-    //   margin-right: 56px;
-    // }
   }
 
   &__btn {
@@ -99,7 +98,7 @@
     height: 100%;
 
     @media (min-width: $bp-sm) {
-      margin-top: 0.5rem;
+      margin-top: space(sm);
       order: 2;
     }
   }
