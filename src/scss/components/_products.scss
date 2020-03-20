@@ -1,8 +1,29 @@
 .c-products {
+
+  @media (min-width: $bp-xs) {
+    background-color: violet;
+  }
+
+  @media (min-width: $bp-sm) {
+    background-color: #78DFD7;
+  }
+
+  @media (min-width: $bp-md) {
+    background-color: #78CDDF;
+  }
+
+  @media (min-width: $bp-lg) {
+    background-color: #789ADF;
+  }
+
+  @media (min-width: $bp-xl) {
+    background-color: #8A78DF;
+  }
+
   &__container {
     position: relative;
     padding-top: space(xl);
-    padding-bottom: 10rem;
+    overflow: hidden; // prevent bear from causing scroll at small screen sizes
 
     @media (min-width: $bp-md) {
       padding-top: space(xl);
@@ -100,6 +121,108 @@
     @media (min-width: $bp-sm) {
       margin-top: space(sm);
       order: 2;
+    }
+  }
+
+  &__ame-grouping {
+    position: relative;
+    margin-bottom: -10px;
+
+    @media (min-width: $bp-sm) {
+      //
+    }
+
+    @media (min-width: $bp-md) {
+      //
+    }
+
+    @media (min-width: $bp-lg) {
+      display: flex;
+    }
+
+    @media (min-width: 70rem) { // 70rem // inbetween lg and xl
+      // justify-self: end;
+      // margin-left: 0;
+    }
+
+    @media (min-width: $bp-xl) {
+      // margin: 0;
+      // justify-self: unset;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 2.5rem;
+
+    @media (min-width: $bp-sm) {
+      // margin: space(md) 0 0 space(xl);
+    }
+
+    @media (min-width: $bp-md) {
+      margin: 2rem 0 0 space(xxl);
+    }
+
+    @media (min-width: $bp-lg) {
+      margin: 0 0 0 0;
+    }
+
+    @media (min-width: $bp-xl) {
+      margin: -1rem 0 0 4.5rem;
+    }
+  }
+
+  &__alphabet-letter {
+    @include alphabet-letter($c-froggy-yellowgreen);
+    display: inline-block;
+    position: absolute;
+    bottom: 4px;
+    left: 145px;
+
+    @media (min-width: $bp-xs) {
+      left: 160px;
+    }
+
+    @media (min-width: $bp-sm) {
+      left: 225px;
+    }
+
+    @media (min-width: $bp-md) {
+      // right: 275px;
+    }
+
+    @media (min-width: $bp-lg) {
+      // right: 325px;
+    }
+
+    @media (min-width: $bp-xl) {
+      // right: 225px;
+    }
+  }
+
+  &__animal {
+    &--bear {
+      position: relative;
+      z-index: $z-index-1;
+
+      @media (min-width: $bp-sm) {
+        // right: 0;
+      }
+
+      @media (min-width: $bp-md) {
+        // right: 50px;
+      }
+
+      @media (min-width: $bp-lg) {
+        // right: 100px;
+      }
+
+      @media (min-width: $bp-xl) {
+        // right: 0;
+      }
+    }
+
+    &--antelope {
+      //
     }
   }
 }

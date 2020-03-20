@@ -1,0 +1,7 @@
+.c-bear {
+  height: 14rem;
+
+  @media (min-width: $bp-sm) {
+    height: 19.6875rem;
+  }
+}
