@@ -9,6 +9,19 @@ copy: |
 ---
 
 <section class="c-products__card o-grid__full o-grid__half@md">
+
+  {{#if ame-animal }}
+    <div class="pos-relative">
+      <div class="c-products__caption c-products__caption--antelope">
+        {{> patterns.components.defaults.caption letter="A" letterModifier="c-caption__letter--rooster-red" caption="is for amazing antelopes and artfull illustrations" }}
+      </div>
+      <div class="c-products__animal c-products__animal--antelope">
+        {{> patterns.components.animals.bear }}
+      </div>
+      <div class="c-products__alphabet-letter c-products__alphabet-letter--antelope">A</div>
+    </div>
+  {{/if}}
+
   <img src="{{ img }}" alt="{{ alt }}" class="c-products__img">
   <div class="c-products__details">
     <h3 class="c-products__name">{{ product }}</h3>

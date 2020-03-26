@@ -17,13 +17,13 @@
   // }
 
   // @media (min-width: $bp-xl) {
-  //   background-color: #8A78DF;
+  //   background-color: #8A78DF;s
   // }
 
   &__container {
     position: relative;
     padding-top: space(xl);
-    overflow: hidden; // prevent bear from causing scroll at small screen sizes
+    // overflow: hidden; // prevent bear from causing scroll at small screen sizes --> hides bear toes. need a fix. move property to main tag.
 
     @media (min-width: $bp-md) {
       padding-top: space(xl);
@@ -127,14 +127,14 @@
   &__ame-grouping {
     position: relative;
     margin-bottom: -10px;
+    //TODO: make bear toes stick out on top of Apps background color
 
     @media (min-width: $bp-md) {
-      //
+      margin-top: -20rem; // say what?! k. whatevs.
     }
 
     @media (min-width: $bp-lg) {
-      // display: flex;
-      // justify-content: space-between;
+      //
     }
 
     @media (min-width: 70rem) { // 70rem // inbetween lg and xl
@@ -149,78 +149,92 @@
   &__caption {
     margin-bottom: 2.5rem;
 
-    @media (min-width: $bp-sm) {
-      text-align: right;
-      margin-right: 4rem;
-    }
-
-    @media (min-width: $bp-md) {
-      text-align: unset;
-      margin: 0 0 2.5rem 3rem;
-      width: 15rem;
-    }
-
-    @media (min-width: $bp-lg) {
-      margin-left: 7rem;
-    }
-
-    @media (min-width: $bp-xl) {
+    &--antelope {
       //
+    }
+
+    &--bear {
+      @media (min-width: $bp-sm) {
+        text-align: right;
+        margin-right: 4rem;
+      }
+
+      @media (min-width: $bp-md) {
+        text-align: unset;
+        margin: 0 0 2.5rem 3rem;
+        width: 15rem;
+      }
+
+      @media (min-width: $bp-lg) {
+        margin-left: 7rem;
+      }
+
+      @media (min-width: $bp-xl) {
+        //
+      }
     }
   }
 
   &__alphabet-letter {
-    @include alphabet-letter($c-froggy-yellowgreen);
     display: inline-block;
     position: absolute;
     bottom: 4px;
-    left: 145px;
 
-    @media (min-width: $bp-xs) {
-      left: 160px;
+    &--antelope {
+      @include alphabet-letter($c-rooster-red);
+      right: 12px;
     }
 
-    @media (min-width: $bp-sm) {
-      left: 225px;
-    }
+    &--bear {
+      @include alphabet-letter($c-froggy-yellowgreen);
+      left: 145px;
 
-    @media (min-width: $bp-md) {
-      // right: 275px;
-    }
+      @media (min-width: $bp-xs) {
+        left: 160px;
+      }
 
-    @media (min-width: $bp-lg) {
-      // right: 325px;
-    }
+      @media (min-width: $bp-sm) {
+        left: 225px;
+      }
 
-    @media (min-width: $bp-xl) {
-      // right: 225px;
+      @media (min-width: $bp-md) {
+        // right: 275px;
+      }
+
+      @media (min-width: $bp-lg) {
+        // right: 325px;
+      }
+
+      @media (min-width: $bp-xl) {
+        // right: 225px;
+      }
     }
   }
 
   &__animal {
     &--bear {
       position: relative;
-      z-index: $z-index-1;
+      z-index: $z-index-1; // move bear in front of the letter B
 
       @media (min-width: $bp-sm) {
-        // right: 0;
+        //
       }
 
       @media (min-width: $bp-md) {
-        // right: 50px;
+        //
       }
 
       @media (min-width: $bp-lg) {
-        // right: 100px;
+        //
       }
 
       @media (min-width: $bp-xl) {
-        // right: 0;
+        //
       }
     }
 
     &--antelope {
-      //
+      margin-bottom: -10px; // WIP!
     }
   }
 }
