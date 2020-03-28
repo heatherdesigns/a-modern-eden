@@ -1,0 +1,24 @@
+.c-dolphin {
+  height: 14rem; // WIP
+
+  @media (min-width: $bp-sm) {
+    height: 19.6875rem; // WIP
+  }
+
+  // These styles were pulled out of the dog SVG so that they can be scoped the dog and only the dog.
+  .cls-1 {
+    fill: #1b75bc;
+  }
+
+  .cls-2 {
+    fill: #00b0d8;
+  }
+
+  .cls-4 {
+    fill: #fff;
+  }
+
+  .cls-5 {
+    fill: #afdfe4;
+  }
+}

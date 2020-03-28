@@ -4,4 +4,32 @@
   @media (min-width: $bp-sm) {
     height: 19.6875rem;
   }
+
+  // These styles were pulled out of the bear SVG so that they can be scoped the bear and only the bear.
+  .cls-1 {
+    fill: #231f20;
+  }
+
+  .cls-2 {
+    fill: #5d3b15;
+  }
+
+  .cls-3 {
+    fill: #7b542c;
+  }
+
+  .cls-4,
+  .cls-5 {
+    fill: none;
+  }
+
+  .cls-4 {
+    stroke: #231f20;
+    stroke-width: 2px;
+  }
+
+  .cls-5 {
+    stroke: #5d3b15;
+    stroke-miterlimit: 10;
+  }
 }

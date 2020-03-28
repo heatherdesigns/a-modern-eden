@@ -1,0 +1,28 @@
+.c-frog {
+  height: 14rem; // WIP
+
+  @media (min-width: $bp-sm) {
+    height: 19.6875rem; // WIP
+  }
+
+  // These styles were pulled out of the frog SVG so that they can be scoped the frog and only the frog.
+  .st2 {
+    fill: #fff;
+  }
+
+  .st3 {
+    fill: #39b54a;
+  }
+
+  .st4 {
+    fill: #d7df23;
+  }
+
+  .st5 {
+    fill: #8dc63f;
+  }
+
+  .st6 {
+    fill: #bcd7a4;
+  }
+}

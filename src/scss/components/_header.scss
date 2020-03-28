@@ -26,6 +26,17 @@
       width: 55%;
     }
 
+    // remove link styles from logo
+    a:not([class]) {
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+        background-image: none;
+        background-position-y: -100%;
+      }
+    }
+
     @media (min-width: $bp-sm) {
       & img {
         width: 60%;

@@ -1,0 +1,36 @@
+.c-cat {
+  height: 14rem; // WIP
+
+  @media (min-width: $bp-sm) {
+    height: 19.6875rem; // WIP
+  }
+
+  // These styles were pulled out of the cat SVG so that they can be scoped the cat and only the cat.
+  .cls-1 {
+    fill: #231f20;
+  }
+
+  .cls-2 {
+    fill: #594a42;
+  }
+
+  .cls-3 {
+    fill: none;
+  }
+
+  .cls-5 {
+    fill: #fff;
+  }
+
+  .cls-7 {
+    fill: #9b8579;
+  }
+
+  .cls-9 {
+    fill: #332f2c;
+  }
+
+  .cls-13 {
+    fill: #bed73b;
+  }
+}
