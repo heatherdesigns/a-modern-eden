@@ -37,7 +37,7 @@
   font-size: space(md);
   color: $c-charcoal;
   line-height: 1.45;
-  margin: 0 0 space(lg);
+  margin: 0 0 1.25rem;
 
   &:only-child,
   &:last-child {
@@ -46,6 +46,7 @@
 
   @media (min-width: $bp-sm) {
     font-size: 1.125rem;
+    margin: 0 0 space(lg);
   }
 }
 

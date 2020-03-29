@@ -31,6 +31,18 @@
       border-bottom: none;
       width: 60%;
 
+      @media (min-width: $bp-sm) {
+        width: 50%;
+      }
+
+      @media (min-width: $bp-sm) {
+        width: 100%;
+      }
+
+      @media (min-width: $bp-unstack-nav) {
+        text-align: center;
+      }
+
       &:hover,
       &:focus {
         background-image: none;
@@ -40,7 +52,7 @@
 
     @media (min-width: $bp-sm) {
       & img {
-        width: 60%;
+        width: 67%;
       }
     }
 

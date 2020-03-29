@@ -92,7 +92,7 @@
     margin-bottom: space(sm);
     width: 100%;
 
-    @media (min-width: $bp-md) {
+    @media (min-width: $bp-sm) {
       margin-bottom: space(md);
     }
 
@@ -103,7 +103,6 @@
 
   &__copy {
     @include default-paragraph;
-    margin-bottom: 1.25rem;
 
     @media (min-width: $bp-sm) {
       flex-basis: 75%;
@@ -158,11 +157,11 @@
     }
 
     &--bear {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
 
       @media (min-width: $bp-sm) {
         text-align: right;
-        margin-right: 4rem;
+        margin: 0 4rem 2.5rem 0;
       }
 
       @media (min-width: $bp-md) {
@@ -246,7 +245,7 @@
 
     &--antelope {
       margin-bottom: -14px;
-      left: 22px;
+      right: -25px;
     }
   }
 }
