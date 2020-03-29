@@ -1,8 +1,8 @@
 .c-products {
 
-  @media (min-width: $bp-xs) {
-    background-color: violet;
-  }
+  // @media (min-width: $bp-xs) {
+  //   background-color: violet;
+  // }
 
   @media (min-width: $bp-sm) {
     background-color: #78DFD7;
@@ -134,7 +134,7 @@
     margin-bottom: -10px;
 
     @media (min-width: $bp-md) {
-      margin-top: -20rem; // say what?! k. whatevs.
+      margin-top: -20rem;
     }
 
     @media (min-width: $bp-lg) {
@@ -154,6 +154,11 @@
     &--antelope {
       margin-bottom: 14.5rem;
       width: 80%;
+
+      @media (min-width: $bp-sm) {
+        margin-bottom: 18.5rem;
+        width: 60%;
+      }
     }
 
     &--bear {
@@ -188,6 +193,10 @@
       @include alphabet-letter($c-rooster-red);
       right: 2px;
       top: 121px;
+
+      @media (min-width: 23.35rem) {
+        top: 89px;
+      }
 
       @media (min-width: $bp-xs) {
         right: 12px;
@@ -244,6 +253,18 @@
       position: absolute;
       top: 192px;
       right: 120px;
+
+      @media (min-width: 23.35rem) {
+        top: 160px;
+      }
+
+      @media (min-width: $bp-xs) {
+        right: 150px;
+      }
+
+      @media (min-width: $bp-sm) {
+        right: 188px;
+      }
     }
   }
 }
