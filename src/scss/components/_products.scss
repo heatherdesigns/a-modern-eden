@@ -1,27 +1,27 @@
 .c-products {
 
-  // @media (min-width: $bp-xs) {
-  //   background-color: violet;
-  // }
+  @media (min-width: $bp-xs) {
+    background-color: violet;
+  }
 
-  // @media (min-width: $bp-sm) {
-  //   background-color: #78DFD7;
-  // }
+  @media (min-width: $bp-sm) {
+    background-color: #78DFD7;
+  }
 
-  // @media (min-width: $bp-md) {
-  //   background-color: #78CDDF;
-  // }
+  @media (min-width: $bp-md) {
+    background-color: #78CDDF;
+  }
 
-  // @media (min-width: $bp-lg) {
-  //   background-color: #789ADF;
-  // }
+  @media (min-width: $bp-lg) {
+    background-color: #789ADF;
+  }
 
-  // @media (min-width: $bp-xl) {
-  //   background-color: #8A78DF;s
-  // }
+  @media (min-width: $bp-xl) {
+    background-color: #8A78DF;
+  }
 
   &__container {
-    position: relative;
+    // position: relative; // this cannot be position relative - that will break the mobile nav
     padding-top: space(xl);
     // overflow: hidden; // prevent bear from causing scroll at small screen sizes --> hides bear toes. need a fix. move property to main tag.
 
@@ -79,17 +79,22 @@
 
   &__name {
     @include h3;
-    margin-bottom: 0.875rem;
+    margin-bottom: 0.5rem;
 
     @media (min-width: $bp-sm) {
       flex: 2;
       order: 1;
+      margin-bottom: 0.875rem;
     }
   }
 
   &__img {
-    margin-bottom: space(md);
+    margin-bottom: space(sm);
     width: 100%;
+
+    @media (min-width: $bp-md) {
+      margin-bottom: space(md);
+    }
 
     @media (min-width: $bp-md) {
       margin-bottom: 2rem;
@@ -98,11 +103,12 @@
 
   &__copy {
     @include default-paragraph;
+    margin-bottom: 1.25rem;
 
     @media (min-width: $bp-sm) {
       flex-basis: 75%;
       order: 3;
-      margin-top: space(sm);
+      margin: space(sm) 0 space(lg) 0;
     }
   }
 
@@ -127,7 +133,6 @@
   &__ame-grouping {
     position: relative;
     margin-bottom: -10px;
-    //TODO: make bear toes stick out on top of Apps background color
 
     @media (min-width: $bp-md) {
       margin-top: -20rem; // say what?! k. whatevs.
@@ -147,13 +152,14 @@
   }
 
   &__caption {
-    margin-bottom: 2.5rem;
-
     &--antelope {
-      //
+      margin-bottom: 5.5rem;
+      width: 80%;
     }
 
     &--bear {
+      margin-bottom: 2.5rem;
+
       @media (min-width: $bp-sm) {
         text-align: right;
         margin-right: 4rem;
@@ -178,16 +184,21 @@
   &__alphabet-letter {
     display: inline-block;
     position: absolute;
-    bottom: 4px;
 
     &--antelope {
       @include alphabet-letter($c-rooster-red);
-      right: 12px;
+      right: 2px;
+      bottom: 10px;
+
+      @media (min-width: $bp-xs) {
+        right: 12px;
+      }
     }
 
     &--bear {
       @include alphabet-letter($c-froggy-yellowgreen);
-      left: 145px;
+      left: 90px;
+      bottom: 4px;
 
       @media (min-width: $bp-xs) {
         left: 160px;
@@ -212,10 +223,10 @@
   }
 
   &__animal {
-    &--bear {
-      position: relative;
-      z-index: $z-index-1; // move bear in front of the letter B
+    position: relative;
+    z-index: $z-index-1; // move animals in front of their letters
 
+    &--bear {
       @media (min-width: $bp-sm) {
         //
       }
@@ -234,7 +245,8 @@
     }
 
     &--antelope {
-      margin-bottom: -10px; // WIP!
+      margin-bottom: -14px;
+      left: 22px;
     }
   }
 }

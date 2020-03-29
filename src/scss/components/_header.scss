@@ -23,12 +23,13 @@
     }
 
     & img {
-      width: 55%;
+      width: 100%;
     }
 
     // remove link styles from logo
     a:not([class]) {
       border-bottom: none;
+      width: 60%;
 
       &:hover,
       &:focus {
@@ -402,7 +403,7 @@
   }
 
   &__ocean-block {
-    background: repeat-x 100%/70% url(/images/ocean.png);
+    background: repeat-x 100%/87% url(/images/ocean.png);
     height: 32vh;
     width: 100vw;
     position: absolute;
