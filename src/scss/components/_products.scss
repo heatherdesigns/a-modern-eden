@@ -152,7 +152,7 @@
 
   &__caption {
     &--antelope {
-      margin-bottom: 5.5rem;
+      margin-bottom: 14.5rem;
       width: 80%;
     }
 
@@ -187,7 +187,7 @@
     &--antelope {
       @include alphabet-letter($c-rooster-red);
       right: 2px;
-      bottom: 10px;
+      top: 121px;
 
       @media (min-width: $bp-xs) {
         right: 12px;
@@ -196,27 +196,24 @@
 
     &--bear {
       @include alphabet-letter($c-froggy-yellowgreen);
-      left: 90px;
-      bottom: 4px;
+      right: -24px;
+      bottom: 5px;
+
+      @media (min-width: $bp-mobile-mini) {
+        right: 22px;
+      }
 
       @media (min-width: $bp-xs) {
         left: 160px;
+        right: 0;
       }
 
       @media (min-width: $bp-sm) {
-        left: 225px;
+        left: 190px;
       }
 
-      @media (min-width: $bp-md) {
-        // right: 275px;
-      }
-
-      @media (min-width: $bp-lg) {
-        // right: 325px;
-      }
-
-      @media (min-width: $bp-xl) {
-        // right: 225px;
+      @media (min-width: $bp-unstack-nav) {
+        left: 240px;
       }
     }
   }
@@ -244,8 +241,9 @@
     }
 
     &--antelope {
-      margin-bottom: -14px;
-      right: -25px;
+      position: absolute;
+      top: 192px;
+      right: 120px;
     }
   }
 }
