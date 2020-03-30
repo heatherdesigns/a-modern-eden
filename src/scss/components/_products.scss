@@ -1,27 +1,5 @@
 .c-products {
-
-  // @media (min-width: $bp-xs) {
-  //   background-color: violet;
-  // }
-
-  @media (min-width: $bp-sm) {
-    background-color: #78DFD7;
-  }
-
-  @media (min-width: $bp-md) {
-    background-color: #78CDDF;
-  }
-
-  @media (min-width: $bp-lg) {
-    background-color: #789ADF;
-  }
-
-  @media (min-width: $bp-xl) {
-    background-color: #8A78DF;
-  }
-
   &__container {
-    // position: relative; // this cannot be position relative - that will break the mobile nav
     padding-top: space(xl);
     // overflow: hidden; // prevent bear from causing scroll at small screen sizes --> hides bear toes. need a fix. move property to main tag.
 
@@ -97,6 +75,10 @@
     }
 
     @media (min-width: $bp-md) {
+      margin-bottom: space(lg);
+    }
+
+    @media (min-width: $bp-lg) {
       margin-bottom: 2rem;
     }
   }
@@ -134,19 +116,11 @@
     margin-bottom: -10px;
 
     @media (min-width: $bp-md) {
-      margin-top: -20rem;
+      margin-top: -10rem;
     }
 
     @media (min-width: $bp-lg) {
-      //
-    }
-
-    @media (min-width: 70rem) { // 70rem // inbetween lg and xl
-      //
-    }
-
-    @media (min-width: $bp-xl) {
-      //
+      margin-top: -20rem;
     }
   }
 
@@ -158,6 +132,15 @@
       @media (min-width: $bp-sm) {
         margin-bottom: 18.5rem;
         width: 60%;
+      }
+
+      @media (min-width: $bp-md) {
+        margin-bottom: 16.5rem;
+        width: 57%;
+      }
+
+      @media (min-width: $bp-lg) {
+        width: 45%;
       }
     }
 
@@ -177,10 +160,6 @@
 
       @media (min-width: $bp-lg) {
         margin-left: 7rem;
-      }
-
-      @media (min-width: $bp-xl) {
-        //
       }
     }
   }
@@ -206,7 +185,7 @@
     &--bear {
       @include alphabet-letter($c-froggy-yellowgreen);
       right: -24px;
-      bottom: 5px;
+      bottom: 4px;
 
       @media (min-width: $bp-mobile-mini) {
         right: 22px;
@@ -231,24 +210,6 @@
     position: relative;
     z-index: $z-index-1; // move animals in front of their letters
 
-    &--bear {
-      @media (min-width: $bp-sm) {
-        //
-      }
-
-      @media (min-width: $bp-md) {
-        //
-      }
-
-      @media (min-width: $bp-lg) {
-        //
-      }
-
-      @media (min-width: $bp-xl) {
-        //
-      }
-    }
-
     &--antelope {
       position: absolute;
       top: 192px;
@@ -263,6 +224,14 @@
       }
 
       @media (min-width: $bp-sm) {
+        right: 188px;
+      }
+
+      @media (min-width: $bp-md) {
+        right: 152px;
+      }
+
+      @media (min-width: $bp-lg) {
         right: 188px;
       }
     }
