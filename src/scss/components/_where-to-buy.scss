@@ -27,15 +27,20 @@
   }
 
   &__boutique-block {
-    //
+    margin-bottom: 1.25rem;
   }
 
   &__name {
-    //
+    @include font-stack-primary($weight: 700);
+    font-size: 1.125rem;
+    margin: 0;
   }
 
-  &__website {
-    //
+  &__street-address,
+  &__city-state,
+  &__website,
+  &__phone {
+    margin: 0;
   }
 
   &__street-address {
