@@ -1,0 +1,52 @@
+.c-where {
+  &__container {
+    position: relative;
+    padding-top: space(xl);
+    padding-bottom: 10rem;
+
+    @media (min-width: $bp-md) {
+      padding-top: space(xl);
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-top: 4.75rem;
+    }
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 1.75rem;
+
+    @media (min-width: $bp-md) {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  &__subheading {
+    //
+  }
+
+  &__boutique-block {
+    //
+  }
+
+  &__name {
+    //
+  }
+
+  &__website {
+    //
+  }
+
+  &__street-address {
+    //
+  }
+
+  &__city-state {
+    //
+  }
+
+  &__phone {
+    //
+  }
+}

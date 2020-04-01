@@ -1,0 +1,29 @@
+---
+name: Where to Buy
+---
+
+<section id="whereToBuy" class="c-where">
+  <div class="c-where__container o-grid o-width-limiter o-width-limiter--sm">
+    <h2 class="c-where__title o-grid__full">Where to Buy</h2>
+    {{#with (data 'where-to-buy')}}
+      {{#each place }}
+        <div class="o-grid__full">
+          <h3 class="c-where__subheading">{{ where }}</h3>
+          {{#each location }}
+          <div class="c-where__boutique-block">
+            <h4 class="c-where__name">{{ boutique }}</h4>
+            <p class="c-where__street-address">{{ street }}</p>
+            <p class="c-where__city-state">{{ citystate }}</p>
+            <p class="c-where__website">{{ website }}</p>
+            <p class="c-where__phone">{{ phone }}</p>
+            <div class="c-where__products">
+              <span>{{ productA }}</span>
+              <span>{{ productB }}</span>
+            </div>
+            {{/each}}
+          </div>
+        {{/each}}
+      {{/with}}
+    </div>
+  </div>
+</section>

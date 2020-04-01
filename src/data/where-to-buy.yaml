@@ -1,0 +1,32 @@
+place:
+  - where: In Stores
+    location:
+      - boutique: samozrejme
+      - street: 123 S Market St
+      - citystate: Troy, OH
+      - phone: (937) 552-9143
+      - productA: Puzzles
+      - productB: Flashcards
+      - boutique: Moon + Arrow
+      - street: 754 S 4th St
+      - citystate: Philadelphia, PA
+      - phone: (215) 469-1448
+      - productA: Posters
+      - productB: Puzzles
+      - boutique: Rhen's Nest Toy Shop
+      - street: 675 Ponce de Leon Ave, Ne
+      - citystate: Atlanta, GA
+      - phone: (404) 883-3306
+      - productA: Puzzles
+      - productB: Flashcards
+  - where: Online
+    location:
+      - boutique: Blik SuperGraphics
+      - website: whatisblik.com
+      - phone: (866) 262-2545
+      - productA: Decals
+      - productB: Puzzles
+      - boutique: Anthropolgie
+      - website: anthropologie.com/kids
+      - phone: (800) 309-2500
+      - productA: Posters
