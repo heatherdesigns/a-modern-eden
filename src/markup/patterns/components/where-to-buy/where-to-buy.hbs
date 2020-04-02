@@ -12,18 +12,30 @@ name: Where to Buy
           {{#each location }}
           <div class="c-where__boutique-block">
             <h4 class="c-where__name">{{ boutique }}</h4>
-            <p class="c-where__street-address">{{ street }}</p>
-            <p class="c-where__city-state">{{ citystate }}</p>
-            <p class="c-where__website">{{ website }}</p>
-            <p class="c-where__phone">{{ phone }}</p>
+            {{#if street }}
+              <p class="c-where__street-address">{{ street }}</p>
+            {{/if}}
+            {{#if citystate }}
+              <p class="c-where__city-state">{{ citystate }}</p>
+            {{/if}}
+            {{#if website }}
+              <p class="c-where__website">{{ website }}</p>
+            {{/if}}
+            {{#if phone }}
+              <p class="c-where__phone">{{ phone }}</p>
+            {{/if}}
             <div class="c-where__products">
-              <span>{{ productA }}</span>
-              <span>{{ productB }}</span>
+              {{#if productA }}
+                <span>{{ productA }}</span>
+              {{/if}}
+              {{#if productB}}
+                <span>{{ productB }}</span>
+              {{/if}}
             </div>
-            {{/each}}
           </div>
-        {{/each}}
-      {{/with}}
-    </div>
+          {{/each}}
+        </div>
+      {{/each}}
+    {{/with}}
   </div>
 </section>
