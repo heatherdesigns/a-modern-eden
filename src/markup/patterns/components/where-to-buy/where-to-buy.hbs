@@ -7,7 +7,7 @@ name: Where to Buy
     <h2 class="c-where__title o-grid__full">Where to Buy</h2>
     {{#with (data 'where-to-buy')}}
       {{#each place }}
-        <div class="o-grid__full">
+        <div class="c-where__list o-grid__full">
           <h3>{{ where }}</h3>
           {{#each location }}
           <div class="c-where__boutique-block">
@@ -37,7 +37,9 @@ name: Where to Buy
         </div>
       {{/each}}
     {{/with}}
-    <div class="c-where__map o-grid__full">MAP</div>
+    <div class="c-where__map o-grid__full">
+      {{> patterns.components.where-to-buy.map }}
+    </div>
     <div class="c-where__ame-grouping o-grid__full">
       <div class="c-where__alphabet-letter">F</div>
       <div class="c-where__animal">

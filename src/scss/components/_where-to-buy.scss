@@ -2,7 +2,27 @@
   &__container {
     position: relative;
     padding-top: space(xl);
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
+
+    @media (min-width: $bp-xs) {
+      background-color: lightyellow;
+    }
+
+    @media (min-width: $bp-sm) {
+      background-color: lightcoral;
+    }
+
+    @media (min-width: $bp-md) {
+      background-color: lightcyan;
+    }
+
+    @media (min-width: $bp-lg) {
+      background-color: lightgreen;
+    }
+
+    @media (min-width: $bp-xl) {
+      background-color: lightslategrey;
+    }
 
     @media (min-width: $bp-md) {
       padding-top: space(xl);
@@ -22,8 +42,8 @@
     }
   }
 
-  &__subheading {
-    //
+  &__list {
+    margin-bottom: space(md);
   }
 
   &__boutique-block {
@@ -44,11 +64,11 @@
   }
 
   &__map {
-    //
+    margin: 0 -1.75rem 3rem;
   }
 
   &__ame-grouping {
-    margin-bottom: 5.25rem;
+    text-align: right;
 
     @media (min-width: $bp-sm) {
       // margin-bottom: 10rem;
@@ -99,8 +119,8 @@
     @include alphabet-letter($c-rooster-red);
     display: inline-block;
     position: absolute;
-    // bottom: 0;
-    // right: 140px;
+    bottom: -4px;
+    right: 15px;
 
     @media (min-width: $bp-sm) {
       // right: 225px;
@@ -121,8 +141,8 @@
 
   &__animal {
     position: absolute;
-    // right: 0;
-    // bottom: -9px;
+    bottom: -26px;
+    right: 140px;
 
     @media (min-width: $bp-sm) {
       // right: 0;
