@@ -4,9 +4,9 @@
     padding-top: space(xl);
     padding-bottom: 15rem;
 
-    @media (min-width: $bp-xs) {
-      background-color: lightyellow;
-    }
+    // @media (min-width: $bp-xs) {
+    //   background-color: lightyellow;
+    // }
 
     @media (min-width: $bp-sm) {
       background-color: lightcoral;
@@ -22,6 +22,12 @@
 
     @media (min-width: $bp-xl) {
       background-color: lightslategrey;
+    }
+
+    //------------- legit styles
+
+    @media (min-width: $bp-xs) {
+      padding-bottom: 6rem;
     }
 
     @media (min-width: $bp-md) {
@@ -42,12 +48,30 @@
     }
   }
 
+  &__subheading {
+    @include h3;
+
+    @media (min-width: $bp-xs) {
+      width: 100%;
+    }
+  }
+
   &__list {
     margin-bottom: space(md);
+
+    @media (min-width: $bp-xs) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__boutique-block {
     margin-bottom: 1.25rem;
+
+    @media (min-width: $bp-xs) {
+      padding-right: 1.25rem;
+      width: 50%;
+    }
   }
 
   &__name {
@@ -65,10 +89,18 @@
 
   &__map {
     margin: 0 -1.75rem 3rem;
+
+    @media (min-width: $bp-xs) {
+      margin-top: 1rem;
+    }
   }
 
   &__ame-grouping {
     text-align: right;
+
+    @media (min-width: $bp-xs) {
+      text-align: left;
+    }
 
     @media (min-width: $bp-sm) {
       // margin-bottom: 10rem;
@@ -96,7 +128,10 @@
   }
 
   &__caption {
-    // max-width: 15.625rem;
+    @media (min-width: $bp-xs) {
+      padding-left: 14rem;
+      padding-top: 3rem;
+    }
 
     @media (min-width: $bp-sm) {
       // margin: space(md) 0 0 space(xl);
@@ -122,6 +157,11 @@
     bottom: -4px;
     right: 15px;
 
+    @media (min-width: $bp-xs) {
+      right: unset;
+      left: 59px;
+    }
+
     @media (min-width: $bp-sm) {
       // right: 225px;
     }
@@ -143,6 +183,11 @@
     position: absolute;
     bottom: -26px;
     right: 140px;
+
+    @media (min-width: $bp-xs) {
+      right: unset;
+      left: 45px;
+    }
 
     @media (min-width: $bp-sm) {
       // right: 0;
