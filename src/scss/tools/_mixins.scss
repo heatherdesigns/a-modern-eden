@@ -36,7 +36,7 @@
 @mixin default-paragraph {
   font-size: space(md);
   color: $c-charcoal;
-  line-height: 1.45;
+  line-height: $line-height-normal;
   margin: 0 0 1.25rem;
 
   &:only-child,

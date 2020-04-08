@@ -19,10 +19,10 @@ name: Where to Buy
               <p class="c-where__city-state">{{ citystate }}</p>
             {{/if}}
             {{#if website }}
-              <p class="c-where__website">{{ website }}</p>
+              <p class="c-where__website"><a href="https://{{ website }}">{{ website }}</a></p>
             {{/if}}
             {{#if phone }}
-              <p class="c-where__phone">{{ phone }}</p>
+              <p class="c-where__phone"><a href="tel:{{ phone }}">{{ phone }}</a></p>
             {{/if}}
             <div class="c-where__products">
               {{#if productA }}
