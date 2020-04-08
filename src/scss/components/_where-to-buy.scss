@@ -4,34 +4,17 @@
     padding-top: space(xl);
     padding-bottom: 15rem;
 
-    // @media (min-width: $bp-xs) {
-    //   background-color: lightyellow;
-    // }
+    @media (min-width: $bp-xs) {
+      padding-bottom: 5rem;
+    }
 
     @media (min-width: $bp-sm) {
-      background-color: lightcoral;
-    }
-
-    @media (min-width: $bp-md) {
-      background-color: lightcyan;
-    }
-
-    @media (min-width: $bp-lg) {
-      background-color: lightgreen;
-    }
-
-    @media (min-width: $bp-xl) {
-      background-color: lightslategrey;
-    }
-
-    //------------- legit styles
-
-    @media (min-width: $bp-xs) {
-      padding-bottom: 6rem;
+      padding-bottom: 8rem;
     }
 
     @media (min-width: $bp-md) {
       padding-top: space(xl);
+      padding-bottom: 5rem;
     }
 
     @media (min-width: $bp-lg) {
@@ -58,19 +41,13 @@
 
   &__list {
     margin-bottom: space(md);
-
-    @media (min-width: $bp-xs) {
-      display: flex;
-      flex-wrap: wrap;
-    }
   }
 
   &__boutique-block {
     margin-bottom: 1.25rem;
 
     @media (min-width: $bp-xs) {
-      padding-right: 1.25rem;
-      width: 50%;
+      margin-right: 1.25rem;
     }
   }
 
@@ -87,11 +64,36 @@
     margin: 0;
   }
 
+  &__products {
+    span + span {
+      &::before {
+        content: '\2022';
+      }
+    }
+  }
+
   &__map {
+    background: right / cover no-repeat url('/images/mapped-locations.jpg');
+    width: 100%;
+    height: 23rem;
     margin: 0 -1.75rem 3rem;
 
     @media (min-width: $bp-xs) {
       margin-top: 1rem;
+    }
+
+    @media (min-width: $bp-sm) {
+      height: 25rem;
+    }
+
+    @media (min-width: $bp-md) {
+      margin: 0;
+      height: 28rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      height: 100%;
+      margin-left: 6rem;
     }
   }
 
@@ -100,53 +102,34 @@
 
     @media (min-width: $bp-xs) {
       text-align: left;
+      display: flex;
+      justify-content: flex-end;
     }
 
     @media (min-width: $bp-sm) {
-      // margin-bottom: 10rem;
-    }
-
-    @media (min-width: $bp-md) {
-      // margin-bottom: 8rem;
-    }
-
-    @media (min-width: $bp-lg) {
-      // margin: 4rem 0 0 2rem;
-      // margin-bottom: unset;
-      // justify-self: center;
-    }
-
-    @media (min-width: 70rem) { // 70rem // inbetween lg and xl
-      // justify-self: end;
-      // margin-left: 0;
-    }
-
-    @media (min-width: $bp-xl) {
-      // margin: 0;
-      // justify-self: unset;
+      display: block;
     }
   }
 
   &__caption {
     @media (min-width: $bp-xs) {
-      padding-left: 14rem;
       padding-top: 3rem;
+      width: 42%;
     }
 
     @media (min-width: $bp-sm) {
-      // margin: space(md) 0 0 space(xl);
+      padding: 6rem 0 0 15.5rem;
+      width: 100%;
+      max-width: 40rem;
     }
 
     @media (min-width: $bp-md) {
-      // margin: 2rem 0 0 space(xxl);
-    }
-
-    @media (min-width: $bp-lg) {
-      // margin: 0 0 0 0;
+      padding: 10rem 0 0 23rem;
     }
 
     @media (min-width: $bp-xl) {
-      // margin: -1rem 0 0 4.5rem;
+      padding-left: 28rem;
+      max-width: 43rem;
     }
   }
 
@@ -158,24 +141,21 @@
     right: 15px;
 
     @media (min-width: $bp-xs) {
-      right: unset;
-      left: 59px;
+      right: 216px;
     }
 
     @media (min-width: $bp-sm) {
-      // right: 225px;
+      bottom: -6px;
+      right: unset;
+      left: 40px;
     }
 
     @media (min-width: $bp-md) {
-      // right: 275px;
-    }
-
-    @media (min-width: $bp-lg) {
-      // right: 325px;
+      left: 140px;
     }
 
     @media (min-width: $bp-xl) {
-      // right: 225px;
+      left: 220px;
     }
   }
 
@@ -185,24 +165,21 @@
     right: 140px;
 
     @media (min-width: $bp-xs) {
-      right: unset;
-      left: 45px;
+      right: 322px;
     }
 
     @media (min-width: $bp-sm) {
-      // right: 0;
+      bottom: -30px;
+      right: unset;
+      left: 22px;
     }
 
     @media (min-width: $bp-md) {
-      // right: 50px;
-    }
-
-    @media (min-width: $bp-lg) {
-      // right: 100px;
+      left: 107px;
     }
 
     @media (min-width: $bp-xl) {
-      // right: 0;
+      left: 187px;
     }
   }
 }

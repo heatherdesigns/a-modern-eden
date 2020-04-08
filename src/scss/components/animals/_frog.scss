@@ -1,9 +1,9 @@
 .c-frog {
-  height: 5rem; // WIP
+  height: 5rem;
 
-  // @media (min-width: $bp-sm) {
-  //   height: 19.6875rem; // WIP
-  // }
+  @media (min-width: $bp-sm) {
+    height: 6.5rem;
+  }
 
   // These styles were pulled out of the frog SVG so that they can be scoped the frog and only the frog.
   .st2 {

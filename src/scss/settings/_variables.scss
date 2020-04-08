@@ -16,6 +16,7 @@ $bp-lg: 60rem;
 $bp-xl: 80rem;
 
 $grid-breakpoints: (
+  xs: $bp-xs,
   sm: $bp-sm,
   md: $bp-md,
   lg: $bp-lg,
