@@ -1,0 +1,22 @@
+---
+name: Hero
+---
+
+<section class="c-hero">
+  {{#with (data 'global')}}
+    <div class="c-hero__container o-width-limiter o-width-limiter--sm u-padding-top-xl u-padding-bottom-xl">
+      <h1 class="c-hero__title">{{ hero-heading }}</h1>
+      <h2 class="c-hero__tagline">{{ tagline }}</h2>
+
+      {{> patterns.components.animals.horse }}
+      {{> patterns.components.animals.rooster }}
+      {{> patterns.components.animals.dog }}
+      {{> patterns.components.animals.cat }}
+
+      {{!-- clouds --}}
+      {{!-- fence --}}
+      {{!-- grass --}}
+
+    </div>
+  {{/with }}
+</section>

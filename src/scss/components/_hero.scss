@@ -1,0 +1,11 @@
+.c-hero {
+  background-color: $c-ocean;
+
+  &__title {
+    @include h1;
+  }
+
+  &__tagline {
+    @include h3;
+  }
+}
