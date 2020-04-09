@@ -58,10 +58,14 @@
   &__name {
     @include h3;
     margin-bottom: 0.5rem;
+    line-height: 1.2;
 
     @media (min-width: $bp-sm) {
       flex: 2;
       order: 1;
+    }
+
+    @media (min-width: $bp-md) {
       margin-bottom: 0.875rem;
     }
   }
@@ -104,9 +108,9 @@
   &__btn {
     flex-shrink: 0;
     height: 100%;
+    margin-left: 1rem;
 
     @media (min-width: $bp-sm) {
-      margin-top: space(sm);
       order: 2;
     }
   }
