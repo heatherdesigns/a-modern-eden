@@ -6,7 +6,7 @@
 
     @media (min-width: $bp-unstack-nav) {
       padding: 0 1.75rem;
-      height: auto !important;
+      height: auto !important; // TODO: need vh unit
     }
   }
 
@@ -59,7 +59,7 @@
     @media (min-width: $bp-unstack-nav) {
       position: relative;
       justify-content: center;
-      height: auto;
+      height: auto; // TODO: need vh unit
 
       & img {
         width: 75%;

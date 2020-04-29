@@ -1,5 +1,27 @@
 .c-hero {
   background-color: $c-ocean;
+  position: relative;
+
+  @media (min-width: $bp-xs) {
+    background-color: lightgreen;
+  }
+
+  @media (min-width: $bp-sm) {
+    background-color: lightseagreen;
+  }
+
+  @media (min-width: $bp-md) {
+    background-color: lightsalmon;
+  }
+
+  @media (min-width: $bp-lg) {
+    background-color: lightpink;
+  }
+
+  @media (min-width: $bp-xl) {
+    background-color: lightblue;
+    height: 84vh;
+  }
 
   &__title {
     @include h1;
@@ -7,5 +29,20 @@
 
   &__tagline {
     @include h3;
+  }
+
+  &__cloud {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__dog,
+  &__cat {
+    display: none;
+
+    @media (min-width: $bp-md) {
+      display: inline;
+    }
   }
 }
