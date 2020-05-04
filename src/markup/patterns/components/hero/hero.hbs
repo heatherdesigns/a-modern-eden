@@ -4,34 +4,60 @@ name: Hero
 
 <section class="c-hero">
   {{#with (data 'global')}}
-    <div class="c-hero__container o-width-limiter o-width-limiter--sm u-padding-top-xl u-padding-bottom-xl">
-      <h1 class="c-hero__title">{{ hero-heading }}</h1>
-      <h2 class="c-hero__tagline">{{ tagline }}</h2>
+    <div class="c-hero__container o-grid o-width-limiter o-width-limiter--sm u-padding-top-xl u-padding-bottom-xl">
 
-      <div class="c-hero__cloud">
-        {{> patterns.components.hero.cloud }}
+      <div class="o-grid__half pos-relative">
+        <div class="c-hero__cloud c-hero__cloud--1">
+          {{> patterns.components.hero.cloud }}
+        </div>
+
+        <div class="c-hero__cloud c-hero__cloud--2">
+          {{> patterns.components.hero.cloud }}
+        </div>
+
+        <div class="c-hero__cloud c-hero__cloud--3">
+          {{> patterns.components.hero.cloud }}
+        </div>
+
+        <div class="c-hero__farmyard">
+          <div class="c-hero__horse">
+            {{> patterns.components.animals.horse }}
+          </div>
+          <div class="c-hero__fence">
+            {{> patterns.components.hero.fence }}
+          </div>
+          <div class="c-hero__rooster">
+            {{> patterns.components.animals.rooster }}
+          </div>
+        </div>
+
+        <div class="c-hero__grass c-hero__grass--1">
+          {{> patterns.components.hero.grass }}
+        </div>
+
+        <div class="c-hero__grass c-hero__grass--2">
+          {{> patterns.components.hero.grass }}
+        </div>
       </div>
 
-      <div class="c-hero__cloud">
-        {{> patterns.components.hero.cloud }}
-      </div>
+      <div class="o-grid__half pos-relative">
+        <div class="c-hero__copy">
+          <h1 class="c-hero__title">{{ hero-heading }}</h1>
+          <h2 class="c-hero__tagline">{{ tagline }}</h2>
+        </div>
 
-      <div class="c-hero__cloud">
-        {{> patterns.components.hero.cloud }}
-      </div>
+        <div class="c-hero__dog">
+          {{> patterns.components.animals.dog }}
+        </div>
 
-      {{> patterns.components.animals.horse }}
-      {{> patterns.components.hero.fence }}
-      {{> patterns.components.animals.rooster }}
-      <div class="c-hero__dog">
-        {{> patterns.components.animals.dog }}
+        <div class="c-hero__cat">
+          {{> patterns.components.animals.cat }}
+        </div>
+
+        <div class="c-hero__grass c-hero__grass--3">
+          {{> patterns.components.hero.grass }}
+        </div>
       </div>
-      <div class="c-hero__cat">
-        {{> patterns.components.animals.cat }}
-      </div>
-      {{> patterns.components.hero.grass }}
-      {{> patterns.components.hero.grass }}
-      {{> patterns.components.hero.grass }}
 
     </div>
   {{/with }}

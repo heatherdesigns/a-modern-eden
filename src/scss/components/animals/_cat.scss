@@ -1,8 +1,8 @@
 .c-cat {
-  height: 14rem; // WIP
+  height: 8rem;
 
   @media (min-width: $bp-sm) {
-    height: 19.6875rem; // WIP
+    height: 10rem;
   }
 
   // These styles were pulled out of the cat SVG so that they can be scoped the cat and only the cat.
