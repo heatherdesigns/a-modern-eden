@@ -53,18 +53,24 @@
 
   &__farmyard {
     position: relative;
+    height: 100%;
   }
 
   &__horse {
     position: absolute;
+    bottom: 0;
+    right: 50%;
   }
 
   &__fence {
     position: absolute;
+    bottom: 0;
   }
 
   &__rooster {
     position: absolute;
+    right: 11.5%; // TODO: change to rem?
+    top: 4.5rem;
   }
 
   &__grass {

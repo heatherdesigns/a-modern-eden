@@ -78,6 +78,7 @@
     position: absolute;
     height: 87.75vh;
     top: 12.25vh;
+    z-index: $z-index-mobile-nav;
 
     @media (min-width: $bp-xs) {
       height: 85.75vh;
