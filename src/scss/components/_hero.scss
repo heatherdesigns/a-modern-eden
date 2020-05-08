@@ -1,46 +1,85 @@
 .c-hero {
-  background-color: lighten($c-raspberry, 12);
+  // background-color: lighten($c-raspberry, 12);
+  background: linear-gradient(180deg, lighten($c-raspberry, 12) 0 62%, $c-grass-green 38% 100%);
+  height: 87.75vh;
 
   @media (min-width: $bp-xs) {
-    background-color: lightgreen;
+    background: lightgreen;
+    height: 85.75vh;
   }
 
   @media (min-width: $bp-sm) {
-    background-color: lightseagreen;
+    background: lightseagreen;
   }
 
   @media (min-width: $bp-unstack-nav) {
-    height: 80vh;
+    height: 72vh;
+    background-color: mediumvioletred;
   }
 
   @media (min-width: $bp-md) {
-    background-color: lightsalmon;
+    background: lightsalmon;
     height: 83.5vh;
   }
 
   @media (min-width: $bp-lg) {
-    background-color: lightpink;
+    background: lightpink;
   }
 
   @media (min-width: $bp-xl) {
-    background-color: lighten($c-raspberry, 12);
+    background: linear-gradient(180deg, lighten($c-raspberry, 12) 0 62%, $c-grass-green 38% 100%);
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__art {
+    position: relative;
+    order: 2;
+
+    @media (min-width: $bp-md) {
+      order: unset;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    order: 1;
+    height: 50%;
+
+    @media (min-width: $bp-md) {
+      order: unset;
+      height: unset;
+    }
   }
 
   &__title {
     line-height: 1.1;
-    margin-bottom: 0.375rem;
-    margin-top: 1.5rem;
+    margin: 0;
     @include font-stack-primary($weight: 900);
+    font-size: 2.15rem;
     text-transform: uppercase;
-    font-size: 3.45rem;
     color: $c-dolphin-blue;
+
+    @media (min-width: $bp-md) {
+      font-size: 3.45rem;
+      margin: 1.5rem 0 0.375rem;
+    }
   }
 
   &__tagline {
     @include h3;
-    font-size: 1.75rem;
+    font-size: 1.1rem;
     @include font-stack-decorative;
-    margin-bottom: 3rem;
+    line-height: 1.5;
+    width: 80%;
+
+    @media (min-width: $bp-md) {
+      margin-bottom: 3rem;
+      font-size: 1.75rem;
+      width: auto;
+    }
   }
 
   &__copy {
@@ -49,6 +88,37 @@
 
   &__cloud {
     position: absolute;
+
+    &--1 {
+      display: none; // TODO: add cloud if it isn't too busy
+
+      @media (min-width: $bp-xl) {
+        top: 2rem;
+        left: -4rem;
+      }
+    }
+
+    &--2 {
+      display: none;
+
+      @media (min-width: $bp-xl) {
+        top: -4.25rem;
+        left: 22rem;
+      }
+    }
+
+    &--3 {
+      display: none;
+
+      @media (min-width: $bp-xl) {
+        top: 6rem;
+        left: 17rem;
+      }
+
+      .c-cloud {
+        height: 2.5rem;
+      }
+    }
   }
 
   &__farmyard {
@@ -60,34 +130,60 @@
     position: absolute;
     bottom: 0;
     right: 50%;
+
+    @media (min-width: $bp-xl) {
+      bottom: 0;
+      right: 50%;
+    }
   }
 
   &__fence {
     position: absolute;
     bottom: 0;
+    right: 2rem;
+
+    @media (min-width: $bp-xl) {
+      bottom: 0;
+      right: unset;
+    }
   }
 
   &__rooster {
     position: absolute;
-    right: 11.5%; // TODO: change to rem?
-    top: 4.5rem;
+    bottom: 13.4rem;
+    right: -0.5rem;
+
+
+    @media (min-width: $bp-xl) {
+      bottom: 17.9rem;
+      left: 22.5rem;
+    }
   }
 
   &__grass {
     position: absolute;
 
     &--1 {
-      bottom: 0;
+      bottom: 2rem;
+      left: -5rem;
     }
 
     &--2 {
-      bottom: 0;
-      left: 6rem;
+      bottom: -2rem;
+      left: 22rem;
     }
 
     &--3 {
-      bottom: 3rem;
-      right: 3rem;
+      display: none;
+
+      @media (min-width: $bp-md) {
+        display: unset;
+      }
+
+      @media (min-width: $bp-xl) {
+        bottom: 3rem;
+        right: 3rem;
+      }
     }
   }
 
@@ -95,8 +191,30 @@
   &__cat {
     display: none;
 
-    @media (min-width: $bp-md) {
-      display: inline;
+    @media (min-width: $bp-lg) {
+      display: unset;
+      position: absolute;
+      bottom: 0;
     }
+
+    @media (max-height: 41rem) {
+      display: none;
+    }
+  }
+
+  &__dog {
+    //
+  }
+
+  &__cat {
+    left: 13rem;
+  }
+
+  &__ground {
+    position: absolute;
+    height: 30vh;
+    width: 100vw;
+    top: 70vh;
+    left: 0;
   }
 }
