@@ -1,10 +1,12 @@
 .c-hero {
-  // background-color: lighten($c-raspberry, 12);
-  background: linear-gradient(180deg, lighten($c-raspberry, 12) 0 62%, $c-grass-green 38% 100%);
+  background-color: lighten($c-raspberry, 12);
+  background-image: linear-gradient(180deg, lighten($c-raspberry, 12) 0 65%, $c-grass-green 35% 100%);
+
   height: 87.75vh;
 
   @media (min-width: $bp-xs) {
-    background: lightgreen;
+    // background: lightgreen;
+    background-image: linear-gradient(180deg, lighten($c-raspberry, 12) 0 72%, $c-grass-green 28% 100%);
     height: 85.75vh;
   }
 
@@ -90,16 +92,19 @@
     position: absolute;
 
     &--1 {
-      display: none; // TODO: add cloud if it isn't too busy
+      top: -13rem;
+      right: 3rem;
 
       @media (min-width: $bp-xl) {
         top: 2rem;
         left: -4rem;
+        right: unset;
       }
     }
 
     &--2 {
-      display: none;
+      top: -14.6rem;
+      right: -3.6rem;
 
       @media (min-width: $bp-xl) {
         top: -4.25rem;
@@ -109,6 +114,10 @@
 
     &--3 {
       display: none;
+
+      @media (min-width: $bp-sm) {
+        display: unset;
+      }
 
       @media (min-width: $bp-xl) {
         top: 6rem;
@@ -131,6 +140,14 @@
     bottom: 0;
     right: 50%;
 
+    @media (min-height: $bp-device-height) {
+      bottom: 5rem;
+    }
+
+    @media (min-width: $bp-xs) {
+      bottom: 2rem;
+    }
+
     @media (min-width: $bp-xl) {
       bottom: 0;
       right: 50%;
@@ -141,6 +158,14 @@
     position: absolute;
     bottom: 0;
     right: 2rem;
+
+    @media (min-height: $bp-device-height) {
+      bottom: 5rem;
+    }
+
+    @media (min-width: $bp-xs) {
+      bottom: 2rem;
+    }
 
     @media (min-width: $bp-xl) {
       bottom: 0;
@@ -153,6 +178,13 @@
     bottom: 13.4rem;
     right: -0.5rem;
 
+    @media (min-height: $bp-device-height) {
+      bottom: 18.4rem;
+    }
+
+    @media (min-width: $bp-xs) {
+      bottom: 15.4rem;
+    }
 
     @media (min-width: $bp-xl) {
       bottom: 17.9rem;
@@ -164,13 +196,27 @@
     position: absolute;
 
     &--1 {
-      bottom: 2rem;
-      left: -5rem;
+      @media (min-width: $bp-xs) {
+        bottom: 0;
+        right: 6rem;
+      }
+
+      @media (min-width: $bp-xl) {
+        bottom: 2rem;
+        left: -5rem;
+      }
     }
 
     &--2 {
-      bottom: -2rem;
-      left: 22rem;
+      @media (min-width: $bp-sm) {
+        bottom: -2rem;
+        left: 22rem;
+      }
+
+      @media (min-width: $bp-xl) {
+        bottom: -2rem;
+        left: 22rem;
+      }
     }
 
     &--3 {

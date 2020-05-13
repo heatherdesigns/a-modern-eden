@@ -4,4 +4,20 @@
   &--small {
     height: 2rem;
   }
+
+  .c-hero__cloud--1 & {
+    height: 3.25rem;
+
+    @media (min-width: $bp-sm) {
+      height: 4rem; // reset
+    }
+  }
+
+  .c-hero__cloud--2 & {
+    height: 2.25rem;
+
+    @media (min-width: $bp-sm) {
+      height: 4rem; // reset
+    }
+  }
 }

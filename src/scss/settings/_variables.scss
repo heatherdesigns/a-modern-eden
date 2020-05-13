@@ -7,7 +7,7 @@ $font-stack-decorative: "Personalitype", cursive;
 $font-stack-decorative-variable: "PersonalitypeVariable", cursive;
 
 //
-// BREAKPOINTS
+// BREAKPOINTS - HORIZONTAL
 //
 $bp-xs: 28rem;
 $bp-sm: 30rem;
@@ -25,6 +25,11 @@ $grid-breakpoints: (
 
 $bp-mobile-mini: 25rem;
 $bp-unstack-nav: 40rem;
+
+//
+// BREAKPOINTS - VERTICAL
+//
+$bp-device-height: 37.5rem;
 
 //
 // LENGTHS
