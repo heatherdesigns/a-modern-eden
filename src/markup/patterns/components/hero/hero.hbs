@@ -6,7 +6,7 @@ name: Hero
   {{#with (data 'global')}}
     <div class="c-hero__container o-grid o-width-limiter o-width-limiter--sm u-padding-top-lg u-padding-top-xl@md u-padding-bottom-lg u-padding-bottom-xl@md">
 
-      <div class="c-hero__art o-grid__full o-grid__half@md">
+      <div class="c-hero__art o-grid__full o-grid__4-12@sm o-grid__half@md">
         <div class="c-hero__cloud c-hero__cloud--1">
           {{> patterns.components.hero.cloud }}
         </div>
@@ -40,7 +40,7 @@ name: Hero
         </div>
       </div>
 
-      <div class="c-hero__heading o-grid__full o-grid__half@md">
+      <div class="c-hero__heading o-grid__full o-grid__8-12@sm o-grid__half@md">
         <div class="c-hero__copy">
           <h1 class="c-hero__title">{{ hero-heading }}</h1>
           <h2 class="c-hero__tagline">{{ tagline }}</h2>
