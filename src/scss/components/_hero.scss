@@ -15,20 +15,21 @@
 
   @media (min-width: $bp-unstack-nav) {
     height: 74vh;
-    background-color: mediumvioletred;
+    // background-color: mediumvioletred;
+    background: linear-gradient(180deg, lighten($c-raspberry, 12) 0 66.5%, $c-grass-green 33.5% 100%);
   }
 
   @media (min-width: $bp-md) {
-    background: lightsalmon;
+    // background: lightsalmon;
     height: 83.5vh;
   }
 
   @media (min-width: $bp-lg) {
-    background: lightpink;
+    // background: lightpink;
   }
 
   @media (min-width: $bp-xl) {
-    background: linear-gradient(180deg, lighten($c-raspberry, 12) 0 62%, $c-grass-green 38% 100%);
+    // background-color: violet;
   }
 
   &__container {
@@ -65,7 +66,7 @@
     color: $c-dolphin-blue;
 
     @media (min-width: $bp-sm) {
-      font-size: 2.5rem; // WIP
+      font-size: 2.5rem;
     }
 
     @media (min-width: $bp-md) {
@@ -95,8 +96,12 @@
 
     @media (min-width: $bp-md) {
       margin-bottom: 3rem;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       width: auto;
+    }
+
+    @media (min-width: $bp-xl) {
+      font-size: 1.75rem;
     }
   }
 
@@ -133,7 +138,7 @@
         left: 0;
       }
 
-      @media (min-width: $bp-xl) {
+      @media (min-width: $bp-lg) {
         top: 2rem;
         left: -4rem;
         right: unset;
@@ -145,12 +150,21 @@
       right: -1.4rem;
 
       @media (min-width: $bp-sm) {
-        top: unset;
-        bottom: 16rem;
-        right: -15rem;
+        top: 14rem;
+        right: -13rem;
       }
 
-      @media (min-width: $bp-xl) {
+      @media (min-width: $bp-unstack-nav) {
+        top: 11rem;
+        right: -16rem;
+      }
+
+      @media (min-width: $bp-md) {
+        top: -4.2rem;
+        right: -4rem;
+      }
+
+      @media (min-width: $bp-lg) {
         top: -4.25rem;
         left: 22rem;
       }
@@ -159,23 +173,22 @@
     &--3 {
       display: none;
 
-      @media (min-width: $bp-sm) {
-        display: unset;
-        top: 13rem;
-        right: -19rem;
-      }
-
       @media (min-width: $bp-unstack-nav) {
         display: unset;
         top: 10rem;
-        right: -26rem;
+        right: -25rem;
       }
 
       @media (min-width: $bp-md) {
-        right: -23rem;
+        top: 18rem;
+        right: -18rem;
       }
 
-      @media (min-width: $bp-xl) {
+      // @media (min-width: $bp-lg) {
+      //   right: -22rem;
+      // }
+
+      @media (min-width: $bp-lg) {
         top: 6rem;
         left: 17rem;
       }
@@ -213,6 +226,10 @@
       right: 12rem;
     }
 
+    @media (min-width: $bp-lg) {
+      right: 14.5rem;
+    }
+
     @media (min-width: $bp-xl) {
       bottom: 0;
       right: 50%;
@@ -235,6 +252,10 @@
 
     @media (min-width: $bp-md) {
       right: 3rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      right: 5.5rem;
     }
 
     @media (min-width: $bp-xl) {
@@ -263,8 +284,11 @@
       bottom: 17.9rem;
     }
 
+    @media (min-width: $bp-lg) {
+      right: 2.25rem;
+    }
+
     @media (min-width: $bp-xl) {
-      // bottom: 17.9rem;
       left: 22.5rem;
     }
   }
@@ -285,12 +309,7 @@
         right: -24rem;
       }
 
-      @media (min-width: $bp-md) {
-        // bottom: 2rem;
-        // left: -5rem;
-      }
-
-      @media (min-width: $bp-xl) {
+      @media (min-width: $bp-lg) {
         bottom: 2rem;
         left: -5rem;
       }
@@ -305,7 +324,7 @@
         right: -2.5rem;
       }
 
-      @media (min-width: $bp-xl) {
+      @media (min-width: $bp-lg) {
         bottom: -2rem;
         left: 22rem;
       }
@@ -314,7 +333,7 @@
     &--3 {
       display: none;
 
-      @media (min-width: $bp-xl) {
+      @media (min-width: $bp-lg) {
         display: unset;
         bottom: 3rem;
         right: 3rem;

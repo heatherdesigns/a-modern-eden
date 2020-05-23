@@ -17,7 +17,11 @@
     height: 2.25rem;
 
     @media (min-width: $bp-sm) {
-      height: 4rem; // reset
+      height: 2.75rem;
+    }
+
+    @media (min-width: $bp-unstack-nav) {
+      height: 4rem;
     }
   }
 }

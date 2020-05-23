@@ -68,11 +68,19 @@
 
     @media (min-width: $bp-md) {
       height: 16.5vh;
-      padding-bottom: 1.75rem;
+      padding: 1.75rem 0;
 
       & img {
         width: 100%;
       }
+    }
+
+    @media (min-width: $bp-lg) {
+      padding: 1.75rem 1.25rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      padding: 1.75rem;
     }
   }
 
