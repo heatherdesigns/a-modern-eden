@@ -10,11 +10,11 @@
   }
 
   @media (min-width: $bp-sm) {
-    background: lightseagreen;
+    // background: lightseagreen;
   }
 
   @media (min-width: $bp-unstack-nav) {
-    height: 72vh;
+    height: 74vh;
     background-color: mediumvioletred;
   }
 
@@ -65,7 +65,7 @@
     color: $c-dolphin-blue;
 
     @media (min-width: $bp-sm) {
-      font-size: 2.4rem; // WIP
+      font-size: 2.5rem; // WIP
     }
 
     @media (min-width: $bp-md) {
@@ -101,7 +101,13 @@
   }
 
   &__copy {
-    //
+    @media (min-width: $bp-md) {
+      margin-top: -2rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      margin-top: 0;
+    }
   }
 
   &__cloud {
@@ -111,6 +117,22 @@
       top: -13rem;
       right: 3rem;
 
+      @media (min-width: $bp-sm) {
+        top: 1.5rem;
+        right: -3.5rem;
+      }
+
+      @media (min-width: $bp-unstack-nav) {
+        top: 0;
+        right: 0;
+      }
+
+      @media (min-width: $bp-md) {
+        top: -1.5rem;
+        right: unset;
+        left: 0;
+      }
+
       @media (min-width: $bp-xl) {
         top: 2rem;
         left: -4rem;
@@ -119,8 +141,14 @@
     }
 
     &--2 {
-      top: -14.6rem;
-      right: -3.6rem;
+      top: -15rem;
+      right: -1.4rem;
+
+      @media (min-width: $bp-sm) {
+        top: unset;
+        bottom: 16rem;
+        right: -15rem;
+      }
 
       @media (min-width: $bp-xl) {
         top: -4.25rem;
@@ -131,8 +159,20 @@
     &--3 {
       display: none;
 
+      @media (min-width: $bp-sm) {
+        display: unset;
+        top: 13rem;
+        right: -19rem;
+      }
+
       @media (min-width: $bp-unstack-nav) {
         display: unset;
+        top: 10rem;
+        right: -26rem;
+      }
+
+      @media (min-width: $bp-md) {
+        right: -23rem;
       }
 
       @media (min-width: $bp-xl) {
@@ -161,9 +201,16 @@
     }
 
     @media (min-width: $bp-sm) {
-      left: 0;
-      right: unset;
+      right: -0.5rem;
       bottom: 0;
+    }
+
+    @media (min-width: $bp-unstack-nav) {
+      right: 1rem;
+    }
+
+    @media (min-width: $bp-md) {
+      right: 12rem;
     }
 
     @media (min-width: $bp-xl) {
@@ -182,9 +229,12 @@
     }
 
     @media (min-width: $bp-sm) {
-      left: -14rem;
-      right: unset;
+      right: -7rem;
       bottom: 0;
+    }
+
+    @media (min-width: $bp-md) {
+      right: 3rem;
     }
 
     @media (min-width: $bp-xl) {
@@ -200,12 +250,21 @@
     right: -0.5rem;
 
     @media (min-width: $bp-sm) {
-      right: -17.5rem;
-      bottom: 2.95rem;
+      right: -19rem;
+      bottom: 5rem;
+    }
+
+    @media (min-width: $bp-unstack-nav) {
+      right: -20rem;
+    }
+
+    @media (min-width: $bp-md) {
+      right: -0.25rem;
+      bottom: 17.9rem;
     }
 
     @media (min-width: $bp-xl) {
-      bottom: 17.9rem;
+      // bottom: 17.9rem;
       left: 22.5rem;
     }
   }
@@ -218,7 +277,17 @@
       right: 5rem;
 
       @media (min-width: $bp-sm) {
-        right: -10rem;
+        right: -11rem;
+      }
+
+      @media (min-width: $bp-unstack-nav) {
+        bottom: 1rem;
+        right: -24rem;
+      }
+
+      @media (min-width: $bp-md) {
+        // bottom: 2rem;
+        // left: -5rem;
       }
 
       @media (min-width: $bp-xl) {
@@ -232,6 +301,8 @@
 
       @media (min-width: $bp-unstack-nav) {
         display: unset;
+        bottom: -1rem;
+        right: -2.5rem;
       }
 
       @media (min-width: $bp-xl) {
@@ -243,11 +314,8 @@
     &--3 {
       display: none;
 
-      @media (min-width: $bp-unstack-nav) {
-        display: unset;
-      }
-
       @media (min-width: $bp-xl) {
+        display: unset;
         bottom: 3rem;
         right: 3rem;
       }
@@ -258,8 +326,7 @@
   &__cat {
     display: none;
 
-    @media (min-width: $bp-lg) {
-      display: unset;
+    @media (min-width: $bp-md) {
       position: absolute;
       bottom: 0;
     }
@@ -270,11 +337,21 @@
   }
 
   &__dog {
-    //
+    @media (min-width: $bp-lg) {
+      display: unset;
+      left: 0;
+    }
   }
 
   &__cat {
-    left: 13rem;
+    @media (min-width: $bp-md) {
+      display: unset;
+      left: 7rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      left: 13rem;
+    }
   }
 
   &__ground {
