@@ -1,9 +1,9 @@
+$bp-logo-split: 64rem;
+
 .c-seen {
   background-color: $c-froggy-yellowgreen;
 
   &__container {
-    display: flex;
-    justify-content: space-between;
     position: relative;
     padding-top: space(xl);
     padding-bottom: 5rem;
@@ -20,11 +20,74 @@
 
   &__title {
     @include h2;
-    margin-bottom: 1.75rem;
-    width: 100%;
+    margin-bottom: 2.25rem;
+    flex-basis: 100%;
+  }
 
-    @media (min-width: $bp-md) {
-      margin-bottom: 2.25rem;
+  &__in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (min-width: $bp-sm) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    @media (min-width: $bp-logo-split) {
+      flex-direction: row;
+    }
+
+    .c-seen__logo {
+      &:first-child { // scholastic
+        width: 100%;
+        text-align: center;
+
+        @media (min-width: $bp-logo-split) {
+          width: auto;
+        }
+
+        img {
+          margin-bottom: -0.5rem;
+        }
+      }
+
+      &:nth-child(2n) { // nyt
+        margin: 3rem 0;
+
+        @media (min-width: $bp-sm) {
+          margin: 3rem 0 0 0;
+        }
+
+        @media (min-width: $bp-logo-split) {
+          margin: 0;
+        }
+
+        img {
+          padding: 0 1rem;
+        }
+      }
+
+      &:last-child { // how
+
+        @media (min-width: $bp-sm) {
+          margin: 3rem 0 0 0;
+        }
+
+        @media (min-width: $bp-logo-split) {
+          margin: 0;
+        }
+
+        img {
+          padding: 0 1rem;
+        }
+      }
+
+      @media (min-width: $bp-logo-split) {
+        margin: 0;
+      }
     }
   }
 }
