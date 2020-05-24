@@ -5,31 +5,16 @@
   height: 87.75vh;
 
   @media (min-width: $bp-xs) {
-    // background: lightgreen;
     height: 85.75vh;
-  }
-
-  @media (min-width: $bp-sm) {
-    // background: lightseagreen;
   }
 
   @media (min-width: $bp-unstack-nav) {
     height: 74vh;
-    // background-color: mediumvioletred;
     background: linear-gradient(180deg, lighten($c-raspberry, 12) 0 66.5%, $c-grass-green 33.5% 100%);
   }
 
   @media (min-width: $bp-md) {
-    // background: lightsalmon;
     height: 83.5vh;
-  }
-
-  @media (min-width: $bp-lg) {
-    // background: lightpink;
-  }
-
-  @media (min-width: $bp-xl) {
-    // background-color: violet;
   }
 
   &__container {
@@ -121,6 +106,8 @@
     &--1 {
       top: -13rem;
       right: 3rem;
+      // animation: floatingCloud 5s;
+      // -webkit-animation: floatingCloud 5s forwards;
 
       @media (min-width: $bp-sm) {
         top: 1.5rem;
@@ -183,10 +170,6 @@
         top: 18rem;
         right: -18rem;
       }
-
-      // @media (min-width: $bp-lg) {
-      //   right: -22rem;
-      // }
 
       @media (min-width: $bp-lg) {
         top: 6rem;

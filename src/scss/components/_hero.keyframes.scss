@@ -1,2 +1,18 @@
 // Prevent the hero.scss from getting HUGE by placing animation keyframes here!
 
+@keyframes floatingCloud {
+  0% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(50px);
+    -webkit-transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(35px);
+    -webkit-transform: translateX(35px);
+  }
+}
