@@ -1,0 +1,30 @@
+.c-seen {
+  background-color: $c-froggy-yellowgreen;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: space(xl);
+    padding-bottom: 5rem;
+
+    @media (min-width: $bp-md) {
+      padding-top: space(xl);
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-top: 4.75rem;
+      padding-bottom: 7.1875rem;
+    }
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 1.75rem;
+    width: 100%;
+
+    @media (min-width: $bp-md) {
+      margin-bottom: 2.25rem;
+    }
+  }
+}
