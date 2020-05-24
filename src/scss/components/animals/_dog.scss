@@ -1,8 +1,8 @@
 .c-dog {
-  height: 10rem; // WIP
+  height: 10rem;
 
   @media (min-width: $bp-sm) {
-    height: 16rem; // WIP
+    height: 16rem;
   }
 
   // These styles were pulled out of the dog SVG so that they can be scoped the dog and only the dog.
@@ -25,6 +25,6 @@
   .st9 {
     fill: #c2b59b;
     stroke: #9b8579;
-    stroke-width: 2
+    stroke-width: 2;
   }
 }
