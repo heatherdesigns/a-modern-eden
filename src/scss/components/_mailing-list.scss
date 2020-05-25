@@ -1,0 +1,67 @@
+.c-mailing-list {
+  &__container {
+    position: relative;
+    padding-top: space(xl);
+    padding-bottom: 5rem;
+
+    @media (min-width: $bp-lg) {
+      padding-top: 4.75rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 1.75rem;
+
+    @media (min-width: $bp-md) {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  &__copy {
+    margin-bottom: 1.6875rem;
+    width: 58%;
+  }
+
+  &__form-fields {
+    display: flex;
+    margin-bottom: 2.5rem;
+  }
+
+  &__field {
+    width: 100%;
+    margin-right: 2rem;
+  }
+
+  &__btn {
+    margin-right: 2rem;
+    float: right;
+    @include clearfix;
+  }
+
+  &-ame-grouping {
+    //
+  }
+
+  &__caption {
+    width: 35%;
+    float: right;
+    margin-top: -1rem;
+    @include clearfix;
+  }
+
+  &__alphabet-letter {
+    @include alphabet-letter($c-ocean);
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 1.5rem;
+  }
+
+  &__animal {
+    position: absolute;
+    bottom: -1.2rem;
+    right: 12rem;
+  }
+}

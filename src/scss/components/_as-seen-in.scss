@@ -27,7 +27,6 @@ $bp-logo-split: 64rem;
   &__in {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
@@ -38,6 +37,7 @@ $bp-logo-split: 64rem;
 
     @media (min-width: $bp-logo-split) {
       flex-direction: row;
+      justify-content: space-between;
     }
 
     .c-seen__logo {
