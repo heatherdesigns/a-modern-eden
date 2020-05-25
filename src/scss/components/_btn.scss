@@ -11,7 +11,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   line-height: $line-height-tight;
-  // transition: all 0.5s $ease-out-expo; // TODO: fix!!
+  transition: transform 0.5s $ease-out-expo, background-color 0.5s $ease-out-expo;
   cursor: pointer;
 
   &--primary {
@@ -20,7 +20,8 @@
 
     &:focus,
     &:hover {
-      // transform: scale(1.075); // TODO: fix!!! type is blurry on scale - do something else
+      transform: scale(0.975);
+      background-color: $c-monkey-brown;
     }
   }
 }
