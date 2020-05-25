@@ -26,6 +26,7 @@ $c-instagram-gradient: linear-gradient(to right top, #fcac0f, #fd9522, #f36a3c, 
 
   &__contact {
     text-align: center;
+    z-index: $z-index-footer-social-icons;
 
     @media (min-width: $bp-md) {
       text-align: right;

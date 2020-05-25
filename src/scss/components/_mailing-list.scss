@@ -8,6 +8,22 @@
       padding-top: 4.75rem;
       padding-bottom: 6rem;
     }
+
+    @media (min-width: $bp-sm) {
+      background-color: lightblue;
+    }
+
+    @media (min-width: $bp-unstack-nav) {
+      background-color: lightsalmon;
+    }
+  }
+
+  &__join-block {
+    margin-bottom: 2rem;
+
+    @media (min-width: $bp-md) {
+      margin: 0;
+    }
   }
 
   &__title {
@@ -21,23 +37,36 @@
 
   &__copy {
     margin-bottom: 1.6875rem;
-    width: 58%;
+
+    @media (min-width: $bp-md) {
+      width: 58%;
+    }
   }
 
   &__form-fields {
-    display: flex;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: $bp-md) {
+      display: flex;
+    }
   }
 
   &__field {
     width: 100%;
-    margin-right: 2rem;
+    margin: 0 1rem 1rem 0;
+
+    @media (min-width: $bp-md) {
+      margin: 0 2rem 2.5rem 0;
+    }
   }
 
   &__btn {
-    margin-right: 2rem;
     float: right;
     @include clearfix;
+
+    @media (min-width: $bp-md) {
+      margin-right: 2rem;
+    }
   }
 
   &-ame-grouping {
@@ -45,23 +74,36 @@
   }
 
   &__caption {
-    width: 35%;
-    float: right;
-    margin-top: -1rem;
-    @include clearfix;
+    margin-bottom: 15rem;
+
+    @media (min-width: $bp-md) {
+      float: right;
+      @include clearfix;
+      width: 35%;
+      margin-top: -1rem;
+    }
   }
 
   &__alphabet-letter {
     @include alphabet-letter($c-ocean);
-    display: inline-block;
     position: absolute;
     bottom: 0;
-    right: 1.5rem;
+    right: 0;
+
+    @media (min-width: $bp-md) {
+      bottom: 0;
+      right: 1.5rem;
+    }
   }
 
   &__animal {
     position: absolute;
-    bottom: -1.2rem;
-    right: 12rem;
+    bottom: -1rem;
+    right: 8rem;
+
+    @media (min-width: $bp-md) {
+      bottom: -1.2rem;
+      right: 12rem;
+    }
   }
 }
