@@ -5,12 +5,13 @@
     padding-bottom: 5rem;
 
     @media (min-width: $bp-unstack-nav) {
-      padding-bottom: 7rem;
+      padding-bottom: 8rem;
     }
 
     @media (min-width: $bp-lg) {
       padding-top: 4.75rem;
-      padding-bottom: 6rem;
+      padding-bottom: 13rem;
+      background-color: lightyellow;
     }
 
     // @media (min-width: $bp-sm) {
@@ -21,8 +22,13 @@
     //   background-color: lightsalmon;
     // }
 
-    @media (min-width: $bp-md) {
-      background-color: lightgreen;
+    // @media (min-width: $bp-md) {
+    //   background-color: lightgreen;
+    // }
+
+    @media (min-width: $bp-xl) {
+      background-color: hotpink;
+      padding-bottom: 6rem;
     }
   }
 
@@ -30,6 +36,10 @@
     margin-bottom: 2rem;
 
     @media (min-width: $bp-md) {
+      margin-bottom: -1rem;
+    }
+
+    @media (min-width: $bp-lg) {
       margin: 0;
     }
   }
@@ -51,6 +61,14 @@
     }
 
     @media (min-width: $bp-md) {
+      width: 85%;
+    }
+
+    @media (min-width: $bp-lg) {
+      width: 75%;
+    }
+
+    @media (min-width: $bp-xl) {
       width: 58%;
     }
   }
@@ -61,6 +79,16 @@
     @media (min-width: $bp-unstack-nav) {
       display: flex;
       margin-bottom: 0;
+    }
+
+    @media (min-width: $bp-md) {
+      flex-direction: column;
+      width: 75%;
+    }
+
+    @media (min-width: $bp-lg) {
+      flex-direction: row;
+      width: 100%;
     }
   }
 
@@ -77,7 +105,15 @@
     }
 
     @media (min-width: $bp-md) {
-      margin: 0 2rem 2.5rem 0;
+      margin: 0 0 2rem 0;
+
+      &:first-child {
+        margin: 0 1.5rem 1rem 0;
+      }
+    }
+
+    @media (min-width: $bp-lg) {
+      margin: 0 2rem 2rem 0;
     }
   }
 
@@ -86,12 +122,12 @@
     @include clearfix;
 
     @media (min-width: $bp-md) {
+      margin-right: 25%;
+    }
+
+    @media (min-width: $bp-lg) {
       margin-right: 2rem;
     }
-  }
-
-  &-ame-grouping {
-    //
   }
 
   &__caption {
@@ -105,8 +141,16 @@
     @media (min-width: $bp-md) {
       float: right;
       @include clearfix;
+      width: 75%;
+    }
+
+    @media (min-width: $bp-lg) {
+      width: 70%;
+    }
+
+    @media (min-width: $bp-xl) {
+      margin: -1rem 1rem 0 0;
       width: 35%;
-      margin-top: -1rem;
     }
   }
 
@@ -116,9 +160,12 @@
     bottom: 0;
     right: 0;
 
-    @media (min-width: $bp-md) {
-      bottom: 0;
+    @media (min-width: $bp-lg) {
       right: 1.5rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      right: 2.5rem;
     }
   }
 
@@ -133,7 +180,14 @@
 
     @media (min-width: $bp-md) {
       bottom: -1.2rem;
+    }
+
+    @media (min-width: $bp-lg) {
       right: 12rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      right: 13rem;
     }
   }
 }

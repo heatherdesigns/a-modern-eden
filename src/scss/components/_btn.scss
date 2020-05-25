@@ -11,7 +11,7 @@
   display: inline-block;
   padding: 0.5rem 1rem;
   line-height: $line-height-tight;
-  transition: all 0.5s $ease-out-expo;
+  // transition: all 0.5s $ease-out-expo; // TODO: fix!!
   cursor: pointer;
 
   &--primary {
@@ -20,7 +20,7 @@
 
     &:focus,
     &:hover {
-      transform: scale(1.075);
+      // transform: scale(1.075); // TODO: fix!!! type is blurry on scale - do something else
     }
   }
 }
