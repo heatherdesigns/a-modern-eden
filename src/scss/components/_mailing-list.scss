@@ -10,24 +10,10 @@
 
     @media (min-width: $bp-lg) {
       padding-top: 4.75rem;
-      padding-bottom: 13rem;
-      background-color: lightyellow;
+      padding-bottom: 6rem;
     }
 
-    // @media (min-width: $bp-sm) {
-    //   background-color: lightblue;
-    // }
-
-    // @media (min-width: $bp-unstack-nav) {
-    //   background-color: lightsalmon;
-    // }
-
-    // @media (min-width: $bp-md) {
-    //   background-color: lightgreen;
-    // }
-
     @media (min-width: $bp-xl) {
-      background-color: hotpink;
       padding-bottom: 6rem;
     }
   }
@@ -86,7 +72,7 @@
       width: 75%;
     }
 
-    @media (min-width: $bp-lg) {
+    @media (min-width: $bp-xl) {
       flex-direction: row;
       width: 100%;
     }
@@ -125,7 +111,7 @@
       margin-right: 25%;
     }
 
-    @media (min-width: $bp-lg) {
+    @media (min-width: $bp-xl) {
       margin-right: 2rem;
     }
   }
@@ -146,10 +132,11 @@
 
     @media (min-width: $bp-lg) {
       width: 70%;
+      margin-top: -1rem;
     }
 
     @media (min-width: $bp-xl) {
-      margin: -1rem 1rem 0 0;
+      margin-right: 1rem;
       width: 35%;
     }
   }
@@ -161,7 +148,7 @@
     right: 0;
 
     @media (min-width: $bp-lg) {
-      right: 1.5rem;
+      right: 3.5rem;
     }
 
     @media (min-width: $bp-xl) {
@@ -183,7 +170,7 @@
     }
 
     @media (min-width: $bp-lg) {
-      right: 12rem;
+      right: 14rem;
     }
 
     @media (min-width: $bp-xl) {
