@@ -1,0 +1,43 @@
+.c-calendar {
+  background-color: $c-ocean;
+
+  &__title {
+    @include h3;
+  }
+
+  &__list {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+
+    @media (min-width: $bp-xs) {
+      margin-right: 1.25rem;
+    }
+  }
+
+  &__event {
+    @include font-stack-primary($weight: 700);
+    font-size: 1.125rem;
+    margin: 0;
+  }
+
+  &__date,
+  &__street,
+  &__citystate,
+  &__location,
+  &__booth,
+  &__website {
+    margin: 0;
+  }
+
+  &__location {
+    display: inline-block;
+
+    + span {
+      display: inline-block;
+
+      + .c-calendar__booth {
+        display: inline-block;
+      }
+    }
+  }
+}

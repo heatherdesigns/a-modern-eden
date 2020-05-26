@@ -1,0 +1,15 @@
+calendar-event:
+  - event: Atlanta International Gift & Home Furnishings Market
+    date: July 10-14, 2020
+    street: 240 Peachtree St NW
+    citystate: Atlanta, GA
+    location: Building 1
+    booth: Showroom 15-D 8
+    website: americasmart.com
+  - event: Retail Renaissance Handmade Market
+    date: August 10-13, 2020
+    street: Javits Convention Center
+    citystate: New York, NY
+    location: Hall HF
+    booth: Booth 1982
+    website: nynow.com
