@@ -1,0 +1,7 @@
+.c-elephant {
+  height: 17rem;
+
+  @media (min-width: $bp-sm) {
+    height: 22rem;
+  }
+}

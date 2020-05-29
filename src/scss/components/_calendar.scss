@@ -1,5 +1,20 @@
 .c-calendar {
   background-color: $c-ocean;
+  position: relative;
+
+  &__container {
+    position: relative;
+    padding-top: space(xl);
+    padding-bottom: 4rem;
+
+    @media (min-width: $bp-md) {
+      padding-top: space(xl);
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-top: 4.75rem;
+    }
+  }
 
   &__title {
     @include h3;
@@ -17,7 +32,8 @@
   &__event {
     @include font-stack-primary($weight: 700);
     font-size: 1.125rem;
-    margin: 0;
+    line-height: 1.3;
+    margin: 0 0 3px 0;
   }
 
   &__date,
@@ -39,5 +55,29 @@
         display: inline-block;
       }
     }
+  }
+
+  &__ame-grouping {
+    //
+  }
+
+  &__caption {
+    width: 35%;
+    padding-top: 10rem;
+    margin-left: -2rem;
+  }
+
+  &__animal {
+    position: absolute;
+    bottom: -10px;
+    right: 9rem;
+    z-index: $z-index-1;
+  }
+
+  &__alphabet-letter {
+    @include alphabet-letter($c-soft-grey);
+    position: absolute;
+    bottom: -6px;
+    right: 0;
   }
 }
