@@ -1,6 +1,6 @@
 .c-calendar {
-  background-color: $c-ocean;
   position: relative;
+  background-color: $c-ocean;
 
   &__container {
     position: relative;
@@ -79,5 +79,30 @@
     position: absolute;
     bottom: -6px;
     right: 0;
+  }
+}
+
+.c-ocean {
+  overflow: hidden;
+
+  &__wave {
+    height: 4rem;
+    width: calc(100% + 10rem);
+    background: repeat-x url(/images/ocean-wave.svg);
+    animation: wave 5s infinite ease-in-out;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-60px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
