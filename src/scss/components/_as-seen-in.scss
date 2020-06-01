@@ -1,26 +1,23 @@
-$bp-logo-split: 64rem;
-
 .c-seen {
   background-color: $c-froggy-yellowgreen;
 
   &__container {
     position: relative;
     padding-top: space(xl);
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
 
     @media (min-width: $bp-md) {
-      padding-top: space(xl);
+      padding-top: 2rem;
     }
 
     @media (min-width: $bp-lg) {
-      padding-top: 4.75rem;
-      padding-bottom: 7.1875rem;
+      padding-top: 3.75rem;
+      padding-bottom: 6.1875rem;
     }
   }
 
   &__title {
     @include h2;
-    margin-bottom: 2.25rem;
     flex-basis: 100%;
   }
 
@@ -35,33 +32,33 @@ $bp-logo-split: 64rem;
       justify-content: space-around;
     }
 
-    @media (min-width: $bp-logo-split) {
+    @media (min-width: $bp-md) {
       flex-direction: row;
       justify-content: space-between;
+      flex-wrap: nowrap;
     }
 
     .c-seen__logo {
-      &:first-child { // scholastic
+      &:first-child { // scholastic --> 354px (will need to fix new image on dif branch)
         width: 100%;
         text-align: center;
+        margin: 1rem 0 -0.5rem 0;
 
-        @media (min-width: $bp-logo-split) {
+        @media (min-width: $bp-md) {
           width: auto;
-        }
-
-        img {
-          margin-bottom: -0.5rem;
+          text-align: unset;
+          margin: 0;
         }
       }
 
       &:nth-child(2n) { // nyt
-        margin: 3rem 0;
+        margin: 2rem 0;
 
         @media (min-width: $bp-sm) {
-          margin: 3rem 0 0 0;
+          margin: 2rem 0 0 0;
         }
 
-        @media (min-width: $bp-logo-split) {
+        @media (min-width: $bp-md) {
           margin: 0;
         }
 
@@ -71,21 +68,16 @@ $bp-logo-split: 64rem;
       }
 
       &:last-child { // how
-
         @media (min-width: $bp-sm) {
-          margin: 3rem 0 0 0;
+          margin: 2rem 0 0 0;
         }
 
-        @media (min-width: $bp-logo-split) {
+        @media (min-width: $bp-md) {
           margin: 0;
-        }
-
-        img {
-          padding: 0 1rem;
         }
       }
 
-      @media (min-width: $bp-logo-split) {
+      @media (min-width: $bp-md) {
         margin: 0;
       }
     }
