@@ -2,6 +2,26 @@
   position: relative;
   background-color: $c-ocean;
 
+  // @media (min-width: $bp-sm) {
+  //   background-color: lightgoldenrodyellow;
+  // }
+
+  // @media (min-width: $bp-unstack-nav) {
+  //   background-color: lightsalmon;
+  // }
+
+  // @media (min-width: $bp-md) {
+  //   background-color: lightgrey;
+  // }
+
+  @media (min-width: $bp-lg) {
+    background-color: lightpink;
+  }
+
+  @media (min-width: $bp-xl) {
+    background-color: lightskyblue;
+  }
+
   &__container {
     position: relative;
     padding-top: space(xl);
@@ -26,6 +46,29 @@
 
     @media (min-width: $bp-xs) {
       margin-right: 1.25rem;
+    }
+
+    @media (min-width: $bp-unstack-nav) {
+      margin-right: 5.5rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      margin-right: 1.25rem;
+    }
+  }
+
+  &__events {
+    @media (min-width: $bp-sm) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media (min-width: $bp-md) {
+      flex-direction: column;
+    }
+
+    @media (min-width: $bp-lg) {
+      flex-direction: row;
     }
   }
 
@@ -62,16 +105,37 @@
   }
 
   &__caption {
-    width: 35%;
-    padding-top: 10rem;
-    margin-left: -2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 11.5rem;
+
+    @media (min-width: $bp-sm) {
+      padding-bottom: 20rem;
+    }
+
+    @media (min-width: $bp-md) {
+      padding-top: 0;
+    }
+
+    @media (min-width: $bp-lg) {
+      // TODO:
+    }
+
+    @media (min-width: $bp-xl) {
+      width: 35%;
+      padding-top: 10rem;
+      margin-left: -2rem;
+    }
   }
 
   &__animal {
     position: absolute;
     bottom: -10px;
-    right: 9rem;
+    right: 7rem;
     z-index: $z-index-1;
+
+    @media (min-width: $bp-sm) {
+      right: 9rem;
+    }
   }
 
   &__alphabet-letter {
@@ -84,11 +148,12 @@
 
 .c-ocean {
   overflow: hidden;
+  margin-bottom: -1rem;
 
   &__wave {
     height: 4rem;
     width: calc(100% + 10rem);
-    background: repeat-x url(/images/ocean-wave.svg);
+    background: repeat-x center / contain url(/images/ocean-wave.svg);
     animation: wave 5s infinite ease-in-out;
   }
 }

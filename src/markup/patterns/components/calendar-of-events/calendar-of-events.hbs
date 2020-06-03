@@ -8,37 +8,39 @@ name: Calendar of Events
   <div class="c-calendar__container o-grid o-width-limiter o-width-limiter--sm">
     <h3 class="c-calendar__title o-grid__full">Calendar of Events</h3>
     {{#with (data 'calendar-of-events')}}
+    <div class="c-calendar__events o-grid__full o-grid__half@md">
       {{#each calendar-event }}
-        <div class="c-calendar__list o-grid__full o-grid__quarter@md">
-          <h4 class="c-calendar__event">{{ event }}</h4>
-          {{#if date }}
-            <p class="c-calendar__date">{{ date }}</p>
-          {{/if}}
-          {{#if street }}
-            <p class="c-calendar__street">{{ street }}</p>
-          {{/if}}
-          {{#if citystate }}
-            <p class="c-calendar__citystate">{{ citystate }}</p>
-          {{/if}}
-          {{#if location }}
-            <p class="c-calendar__location">{{ location }}</p>
-          {{/if}}
-          {{#if location }}
-            {{#if booth }}
-              <span>&#x2022;</span>
+          <div class="c-calendar__list">
+            <h4 class="c-calendar__event">{{ event }}</h4>
+            {{#if date }}
+              <p class="c-calendar__date">{{ date }}</p>
             {{/if}}
-          {{/if}}
-          {{#if booth }}
-            <p class="c-calendar__booth">{{ booth }}</p>
-          {{/if}}
-          {{#if website }}
-            <p class="c-calendar__website"><a class="c-link c-link--alternate" href="https://{{ website }}">{{ website }}</a></p>
-          {{/if}}
-        </div>
+            {{#if street }}
+              <p class="c-calendar__street">{{ street }}</p>
+            {{/if}}
+            {{#if citystate }}
+              <p class="c-calendar__citystate">{{ citystate }}</p>
+            {{/if}}
+            {{#if location }}
+              <p class="c-calendar__location">{{ location }}</p>
+            {{/if}}
+            {{#if location }}
+              {{#if booth }}
+                <span>&#x2022;</span>
+              {{/if}}
+            {{/if}}
+            {{#if booth }}
+              <p class="c-calendar__booth">{{ booth }}</p>
+            {{/if}}
+            {{#if website }}
+              <p class="c-calendar__website"><a class="c-link c-link--alternate" href="https://{{ website }}">{{ website }}</a></p>
+            {{/if}}
+          </div>
       {{/each}}
+      </div>
     {{/with}}
 
-    <div class="c-calendar__ame-grouping o-grid__full o-grid__half@lg">
+    <div class="c-calendar__ame-grouping o-grid__full o-grid__half@md">
       <div class="c-calendar__caption">
         {{> patterns.components.defaults.caption letter="E" letterModifier="c-caption__letter--soft-grey" caption="is for floppy-eared elephants and educational play" }}
       </div>
