@@ -2,26 +2,6 @@
   position: relative;
   background-color: $c-ocean;
 
-  // @media (min-width: $bp-sm) {
-  //   background-color: lightgoldenrodyellow;
-  // }
-
-  // @media (min-width: $bp-unstack-nav) {
-  //   background-color: lightsalmon;
-  // }
-
-  // @media (min-width: $bp-md) {
-  //   background-color: lightgrey;
-  // }
-
-  @media (min-width: $bp-lg) {
-    background-color: lightpink;
-  }
-
-  @media (min-width: $bp-xl) {
-    background-color: lightskyblue;
-  }
-
   &__container {
     position: relative;
     padding-top: space(xl);
@@ -69,6 +49,7 @@
 
     @media (min-width: $bp-lg) {
       flex-direction: row;
+      padding-bottom: 10rem;
     }
   }
 
@@ -100,10 +81,6 @@
     }
   }
 
-  &__ame-grouping {
-    //
-  }
-
   &__caption {
     padding-top: 1.5rem;
     padding-bottom: 11.5rem;
@@ -117,11 +94,15 @@
     }
 
     @media (min-width: $bp-lg) {
-      // TODO: adding a comment to verify my git commits
+      position: absolute;
+      bottom: 0;
+      right: 30.5rem;
+      padding: 0 2rem 4rem 0;
+      width: 25%;
     }
 
     @media (min-width: $bp-xl) {
-      width: 35%;
+      width: 20%;
       padding-top: 10rem;
       margin-left: -2rem;
     }
