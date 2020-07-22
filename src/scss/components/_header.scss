@@ -7,6 +7,10 @@
     @media (min-width: $bp-unstack-nav) {
       padding: 0 1.75rem;
     }
+
+    a[href]:not([class]) { // hide background-image underline in Chrome
+      background-image: none;
+    }
   }
 
   &__intro {

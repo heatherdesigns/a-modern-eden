@@ -1,0 +1,136 @@
+.c-sell-ame {
+  &__container {
+    position: relative;
+    padding-top: space(xl);
+    padding-bottom: 12rem;
+
+    @media (min-width: $bp-sm) {
+      padding-bottom: 10rem;
+    }
+
+    @media (min-width: $bp-md) {
+      padding-top: space(xl);
+      padding-bottom: 0;
+      margin-bottom: -2rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-top: 4.75rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      padding-bottom: space(md);
+    }
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 1.75rem;
+
+    @media (min-width: $bp-md) {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  &__copy {
+    margin: 0 0 1.6875rem;
+
+    @media (min-width: $bp-lg) {
+      padding-right: 2rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      padding-right: 5rem;
+    }
+  }
+
+  &__form-fields {
+    margin-bottom: 2rem;
+
+    @media (min-width: $bp-md) {
+      padding-left: 4rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      padding-left: 6rem;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  &__btn {
+    @include clearfix;
+    margin-top: 0.5rem;
+    float: right;
+  }
+
+  &__ame-grouping {
+    position: relative;
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: -28rem;
+
+    @media (min-width: $bp-sm) {
+      bottom: -35.25rem;
+      right: 0;
+      width: 40%;
+      text-align: right;
+    }
+
+    @media (min-width: $bp-unstack-nav) {
+      bottom: -34rem;
+      width: 52%;
+    }
+
+    @media (min-width: $bp-md) {
+      margin-top: 2rem;
+      margin-bottom: 0;
+      text-align: unset;
+      position: relative;
+      bottom: 0;
+      width: 80%;
+    }
+  }
+
+  &__alphabet-letter {
+    @include alphabet-letter($c-monkey-brown);
+    position: absolute;
+    bottom: -44rem;
+    left: -2rem;
+
+    @media (min-width: $bp-sm) {
+      bottom: -43rem;
+    }
+
+    @media (min-width: $bp-md) {
+      bottom: -6.5rem;
+    }
+  }
+
+  &__animal {
+    position: absolute;
+    bottom: -44rem;
+    left: 7.5rem;
+    z-index: $z-index-dolphin;
+
+    @media (min-width: $bp-sm) {
+      bottom: -43.5rem;
+      left: 8.5rem;
+    }
+
+    @media (min-width: $bp-md) {
+      bottom: -8rem;
+      left: 11.675rem;
+      right: unset;
+    }
+
+    @media (min-width: $bp-lg) {
+      bottom: -7.5rem;
+    }
+  }
+}

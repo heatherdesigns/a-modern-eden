@@ -43,8 +43,13 @@
       flex-direction: row;
     }
 
+    @media (min-width: $bp-unstack-nav) {
+      padding-bottom: 20rem;
+    }
+
     @media (min-width: $bp-md) {
       flex-direction: column;
+      padding-bottom: 0;
     }
 
     @media (min-width: $bp-lg) {
@@ -87,14 +92,24 @@
 
     @media (min-width: $bp-sm) {
       padding-bottom: 20rem;
+      width: 80%;
+    }
+
+    @media (min-width: $bp-unstack-nav) {
+      position: absolute;
+      bottom: 7rem;
+      padding: 0;
+      width: 30%;
     }
 
     @media (min-width: $bp-md) {
-      padding-top: 0;
+      top: 4rem;
+      bottom: unset;
+      width: 40%;
     }
 
     @media (min-width: $bp-lg) {
-      position: absolute;
+      top: unset;
       bottom: 0;
       right: 30.5rem;
       padding: 0 2rem 4rem 0;
@@ -129,12 +144,12 @@
 
 .c-ocean {
   overflow: hidden;
-  margin-bottom: -1rem;
+  margin: 1rem 0 -1rem;
 
   &__wave {
-    height: 4rem;
+    height: 7.5rem;
     width: calc(100% + 10rem);
-    background: repeat-x center / contain url(/images/ocean-wave.svg);
+    background: repeat-x center url(/images/ocean-wave.svg);
     animation: wave 5s infinite ease-in-out;
   }
 }
