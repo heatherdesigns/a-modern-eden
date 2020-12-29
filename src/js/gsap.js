@@ -18,12 +18,24 @@ for (let i = 0; i < navButtons.length; i+=1) {
     gsap.to(window, {
       duration: timing,
       ease: "circ",
-      scrollTo:{
+      scrollTo: {
         y: section,
         offsetY: -20,
-      }
+      },
     });
   });
 }
 
-// TODO: where to buy buttons!
+// Adds ScrollTo / smoothly scroll from an item clicked on in Products to the Where to Buy section
+document.querySelectorAll(".c-products__btn").forEach((buyBtn) => {
+  buyBtn.addEventListener("click", () => {
+    gsap.to(window, {
+      duration: 2,
+      ease: "circ",
+      scrollTo: { 
+        y: "#whereToBuy",
+        offsetY: -20,
+       },
+    });
+  });
+});
