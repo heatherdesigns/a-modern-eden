@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production') {
   );
 }
 
-app.use('/', express.static('dist'));
+app.use('/', express.static('dist/'));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}!`);
