@@ -2,10 +2,10 @@ import { gsap } from "gsap";
 
 // ScrollTo / smoothly scroll from navigation items to their section on the page
 
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
-let navButtons = ['discover', 'about', 'sell'];
+let navButtons = ["discover", "about", "sell"];
 
 for (let i = 0; i < navButtons.length; i+=1) {
 
