@@ -46,12 +46,15 @@ Running `npm test` will run the following tasks:
 - `stylelint`: Checks all CSS  in the `dist/` for errors and enforces [Sparkbox's code conventions](https://www.npmjs.com/package/@sparkbox/stylelint-config-sparkbox)
 - `eslint`: Checks all JavaScript  in the `dist/` for errors and enforces [Sparkbox's code conventions](https://www.npmjs.com/package/eslint-config-sparkbox)
 
+Webhint
+-------
+
+[webhint](https://webhint.io/) is a customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors.
+
 Deploying
 ---------
 
 A Modern Eden is hosted on Heroku.
-
-Running `git push heroku master` will deploy the latest version of `master` to https://a-modern-eden.herokuapp.com 
 
 See [Heroku documentation](https://devcenter.heroku.com/articles/git#deploying-code) for deploying code.
 

@@ -1,0 +1,15 @@
+{
+  "connector": {
+    "name": "local",
+    "options": {
+      "pattern": ["**", "!.git/**", "!node_modules/**"]
+    }
+  },
+  "formatters": ["stylish"],
+  "hints": {
+      // "content-type": ["error", {
+      //     ".*\\.js": "application/javascript; charset=utf-8"
+      // }]
+      "meta-charset-utf-8:error"
+  }
+}
