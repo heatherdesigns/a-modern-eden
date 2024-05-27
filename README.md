@@ -51,10 +51,3 @@ Webhint
 
 [webhint](https://webhint.io/) is a customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors.
 
-Deploying
----------
-
-A Modern Eden is hosted on Heroku.
-
-See [Heroku documentation](https://devcenter.heroku.com/articles/git#deploying-code) for deploying code.
-
