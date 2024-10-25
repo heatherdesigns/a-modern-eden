@@ -4,9 +4,11 @@ Setup
 -----
 1. Before running the project setup node/npm ([Installation instructions](https://nodejs.org/en/download/)).
 
-2. Run `npm install`.
+2. Note that you will need to update node to v10.13.0 in order for this project to compile.
 
-3. Run `npm start`. This will:
+3. Run `npm install`.
+
+4. Run `npm start`. This will:
 
   - Clear any previously built project files
   - Build project files
